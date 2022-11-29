@@ -12,6 +12,6 @@ When exported, Divi's pages will show the context they have been exported in. Th
 
 You will need to import the file in the same context as it was exported.
 
-“et_builder_layouts” – Exported from the Divi Library
-“et_builder” – Exported from the Divi Builder
-“et_theme_builder” – Exported from the Theme Builder
+-   “et_builder_layouts” – Exported from the Divi Library
+-   “et_builder” – Exported from the Divi Builder
+-   “et_theme_builder” – Exported from the Theme Builder
