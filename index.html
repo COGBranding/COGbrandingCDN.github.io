@@ -5,36 +5,66 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>COG Branding CDN</title>
-        <link rel="stylesheet" href="/css/diviNormalize.css" />
-        <link rel="stylesheet" href="/css/diviCheckout.css" />
-        <link rel="stylesheet" href="/css/diviMyAccount.css" />
-        <link rel="stylesheet" href="/css/diviAnimation.css" />
-        <link rel="stylesheet" href="/css/LiveTeam.css" />
-        <link rel="stylesheet" href="/cog-branding/css/landing-page.css" />
+        <link
+            rel="shortcut icon"
+            href="/public/assets/favicon.png"
+            type="image/x-icon"
+        />
+
+        <!-- CDN CSS Files -->
+        <link rel="stylesheet" href="/src/cdn/css/divi/diviNormalize.css" />
+
+        <!-- Client CSS Files -->
+        <link
+            rel="stylesheet"
+            href="/src/clients/cog-branding/css/landing-page.css"
+        />
+
+        <!-- Component CSS Files -->
     </head>
 
     <body>
-        <h4 class="footer__accordion">Heading</h4>
-        <div id="footer__content">
-            <p>Link</p>
-            <p>Link</p>
-            <p>Link</p>
-            <p>Link</p>
-            <p>Link</p>
-        </div>
+        <header class="cdn__header">
+            <div class="cdn__header__image">
+                <img src="/public/assets/logo.png" />
+            </div>
 
+            <div class="cdn__header__items">
+                <ul class="cdn__header__items__list">
+                    <li class="cdn__header__items__list__item">
+                        diviFunction.js
+                    </li>
+                    <li class="cdn__header__items__list__item">
+                        diviNormalize.css
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- jQuery -->
         <script
             src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
             crossorigin="anonymous"
         ></script>
 
-        <script type="text/javascript" src="/js/diviAnimation.js"></script>
-        <script type="text/javascript" src="/js/diviFunction.js"></script>
-        <script type="text/javascript" src="/js/diviCart.js"></script>
+        <!-- CDN JS Files -->
         <script
             type="text/javascript"
-            src="cog-branding/js/landing-page.js"
+            src="/src/cdn/js/divi/diviFunction.js"
         ></script>
+
+        <script
+            type="text/javascript"
+            src="/src/cdn/js/divi/diviCart.js"
+        ></script>
+
+        <!-- Client JS Files -->
+        <script
+            type="text/javascript"
+            src="/src/clients/cog-branding/js/landing-page.js"
+        ></script>
+
+        <!-- Component/Template JS Files -->
     </body>
 </html>
