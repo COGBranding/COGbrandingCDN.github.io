@@ -1,0 +1,48 @@
+// Import this file in your components folder
+@keyframes runMarquee {
+    from {
+      transform: translateX(0px);
+    }
+    to {
+      transform: translateX(calc(-256rem));
+    }
+}
+
+// Assign this class to the code .et_pb_code block
+.marquee-logo{
+    animation: 120s linear 0s infinite normal none running runMarquee;
+    display: flex;
+    width: calc(500rem);
+    opacity: 1;
+
+    // Assign this class to the row
+    &__row{
+        overflow: hidden;
+        position: relative;
+        max-width: 144rem;
+        margin: 0px auto;
+    }
+
+    // Wrap the image in a div and assign it this class
+    &__logo{
+        display: flex;
+        margin: 0 3rem;
+        align-items: center;
+        justify-content: center;
+        width: 9rem;
+        height: 5rem;
+
+        img{
+            height: 45px;
+            max-width: 100%;
+            max-height: 100%;
+            transition: all 0.2s ease-in-out;
+
+            // You can delete the hover styles if the image is not linked
+            &:hover{
+                opacity: 0.75;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+}

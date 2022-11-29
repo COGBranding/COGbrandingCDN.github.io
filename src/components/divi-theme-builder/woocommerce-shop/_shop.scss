@@ -1,0 +1,104 @@
+// Import this file into the 'pages' folder and import in the main.scss file.
+$bodyFont: "Open Sans", sans-serif;
+
+%product__title {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    padding: 0.5em 0 0.25em !important;
+
+    @media (max-width: 767px) {
+        font-size: 0.875rem !important;
+        line-height: 1.2 !important;
+    }
+}
+
+%product__overlay {
+    border: none !important;
+    font-size: 0.875rem !important;
+    background-color: var(--black-50) !important;
+
+    &:before {
+        content: "View Product" !important;
+        font-family: $bodyFont  !important;
+        color: #fff !important;
+        font-size: 1rem !important;
+        font-weight: 400 !important;
+        text-align: center !important;
+    }
+}
+
+body.woocommerce {
+    .shop-template {
+        padding: 20px 0 !important;
+
+        &__row {
+            padding: 10px 0 !important;
+        }
+
+        &__products {
+            p.woocommerce-result-count {
+                display: flex;
+                align-items: center;
+                color: $black;
+                height: 40px;
+            }
+
+            form.woocommerce-ordering {
+                select {
+                    height: 40px;
+                    background-color: #fff !important;
+                    border: 1px solid var(--black-20) !important;
+                    border-radius: 0 !important;
+                    color: $black !important;
+                    transition: all 0.2s ease-in-out;
+
+                    &:hover,
+                    &:focus {
+                        border-color: $black !important;
+                        transition: all 0.2s ease-in-out;
+                    }
+                }
+            }
+
+            li.product {
+                &:not(:last-child) {
+                    margin-bottom: 20px !important;
+                }
+
+                @media (min-width: 981px) {
+                    width: 23.87% !important;
+
+                    &:not(:last-child) {
+                        margin-right: 1.5% !important;
+                    }
+                }
+
+                .et_overlay {
+                    @extend %product__overlay;
+                }
+
+                a img {
+                    margin-bottom: 4px !important;
+                }
+
+                h2.woocommerce-loop-product__title {
+                    @extend %product__title;
+                }
+
+                .price {
+                    color: $grey !important;
+                    font-size: 1rem;
+
+                    @media (max-width: 767px) {
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.et-db #et-boc .et-l .et_overlay:before {
+    font-family: $bodyFont !important;
+}

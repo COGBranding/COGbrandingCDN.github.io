@@ -1,0 +1,331 @@
+// Import this file into the 'pages' folder and import in the main.scss file.
+$tabs-border-color: var(--black-20);
+
+%product__title {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    padding: 0.5em 0 0.25em !important;
+
+    @media (max-width: 767px) {
+        font-size: 0.875rem !important;
+        line-height: 1.2 !important;
+    }
+}
+
+%product__overlay {
+    border: none !important;
+    font-size: 0.875rem !important;
+    background-color: var(--black-50) !important;
+
+    &:before {
+        content: "View Product" !important;
+        font-family: $bodyFont  !important;
+        color: #fff !important;
+        font-size: 1rem !important;
+        font-weight: 400 !important;
+        text-align: center !important;
+    }
+}
+
+// Single product page
+div.product-template {
+    padding: 20px 0 !important;
+
+    &__row {
+        &.first {
+            // Top row with breadcrumb and cart notice
+            padding: 10px 0 0 !important;
+        }
+
+        &.product {
+            // Second row with product image and information
+            padding: 20px 0 !important;
+        }
+
+        &.tabs {
+            // Third row with description and additional information
+            padding: 10px 0 !important;
+        }
+
+        &.related {
+            // Last row with related products
+            padding: 20px 0 !important;
+        }
+    }
+
+    &__breadcrumbs {
+        font-size: 14px;
+        margin-bottom: 10px !important;
+
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__cart-notice {
+        .woocommerce-message {
+            // Added to cart notice
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: center;
+            background: var(--success-l1) !important;
+            color: var(--success) !important;
+            font-size: 15px !important;
+            border-radius: 5px;
+
+            @media (max-width: 980px) {
+                display: block;
+            }
+
+            a.button {
+                background: var(--success) !important;
+                border: 1px solid transparent !important;
+                color: #fff !important;
+                font-size: 14px !important;
+                border-radius: 5px !important;
+                margin-left: 20px;
+                padding: 6px 12px;
+
+                &:hover {
+                    background: var(--success-l1) !important;
+                    border-color: var(--success) !important;
+                    color: var(--success) !important;
+                }
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__image {
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        color: $black;
+        margin-bottom: 10px !important;
+    }
+
+    &__price {
+        font-size: 1rem;
+        margin-bottom: 10px !important;
+
+        p.price {
+            color: $grey !important;
+        }
+    }
+
+    &__reviews {
+        margin-bottom: 20px !important;
+    }
+
+    &__add-to-cart {
+        label {
+            // Variation labels
+            font-weight: 400 !important;
+            color: $black;
+        }
+
+        tr {
+            // Variation dropdowns wrapper
+            display: flex;
+            flex-direction: column;
+        }
+
+        td {
+            margin-bottom: -8px !important;
+        }
+
+        select {
+            // Variation dropdown
+            // font-family: ; Update font-family with body font instead of Open Sans
+            margin-top: 2px;
+            height: 40px;
+            background-color: #fff !important;
+            border: 1px solid var(--black-20) !important;
+            border-radius: 0 !important;
+            color: $black !important;
+            font-size: 15px !important;
+            transition: all 0.2s ease-in-out;
+
+            &:hover,
+            &:focus {
+                border-color: $black !important;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+
+        .variations td.value span:after {
+            content: "\33" !important;
+            font-family: "ETmodules";
+            border: none !important;
+            height: unset !important;
+            margin-top: 0 !important;
+            right: 24px !important;
+            transform: translateY(-30px) !important;
+        }
+
+        .reset_variations {
+            margin-top: 0.5em !important;
+            margin-bottom: -20px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .quantity {
+            input.qty {
+                @extend select;
+                width: 60px;
+
+                &:hover,
+                &:focus {
+                    border-color: $black !important;
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+        }
+
+        button.button {
+            background: var(--success) !important;
+            border: 1px solid transparent !important;
+            color: #fff !important;
+            font-size: 15px !important;
+            border-radius: 0 !important;
+            padding: 0 16px !important;
+            width: calc(100% - 84px);
+            height: 40px;
+
+            &:hover {
+                background-color: #fff !important;
+                border-color: var(--success) !important;
+                color: var(--success) !important;
+                padding: 0 16px !important;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__short-description {
+        p,
+        ol,
+        ul {
+            font-size: 1rem;
+        }
+
+        li {
+            margin: 5px 0;
+
+            &:first-child {
+                margin: 20px 0 5px;
+            }
+        }
+    }
+
+    &__tabs {
+        &.et_pb_tabs {
+            border: 0;
+
+            ul.et_pb_tabs_controls {
+                background-color: #fff;
+                font-size: 1rem;
+
+                &:after {
+                    border-top: 1px solid $tabs-border-color;
+
+                    @media (max-width: 767px) {
+                        display: none;
+                    }
+                }
+
+                li {
+                    // Link wrapper
+                    border-right: 0;
+
+                    @media (max-width: 767px) {
+                        border-bottom: 0;
+                    }
+
+                    a {
+                        // Link
+                        padding: 10px 30px;
+                        color: $grey;
+                    }
+                }
+            }
+
+            .et_pb_tab_active {
+                background-color: #fff;
+                border-top: 1px solid $tabs-border-color;
+                border-left: 1px solid $tabs-border-color;
+                border-right: 1px solid $tabs-border-color !important;
+
+                @media (max-width: 767px) {
+                    border: 1px solid $tabs-border-color !important;
+                }
+
+                a {
+                    color: $black !important;
+                }
+            }
+        }
+
+        // Inner content
+        h2 {
+            font-size: 1.25rem;
+        }
+
+        h4 {
+            @extend h2;
+        }
+
+        p {
+            font-size: 0.9375rem;
+        }
+
+        .et_pb_tab {
+            padding: 30px;
+        }
+    }
+
+    &__related {
+        margin-bottom: 20px !important;
+
+        p {
+            font-size: 1.5rem;
+            color: $black;
+        }
+    }
+
+    &__related-products {
+        .related h2:first-child {
+            display: none;
+        }
+
+        h2.woocommerce-loop-product__title {
+            display: block;
+            @extend %product__title;
+        }
+
+        li.product {
+            @media (max-width: 980px) {
+                margin-bottom: 20px !important;
+            }
+        }
+
+        .et_overlay {
+            @extend %product__overlay;
+        }
+    }
+}

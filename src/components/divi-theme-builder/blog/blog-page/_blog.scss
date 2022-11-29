@@ -1,0 +1,68 @@
+// Import this file into the 'pages' folder and import in the main.scss file.
+.news-blog{
+
+    &__blog{
+        .column{
+            &.size-1of3{
+                width: 31.3% !important;
+                margin-right: 2% !important;
+            }
+
+            &.size-1of2{
+                width: 48% !important;
+                margin-right: 2% !important;
+            }
+
+            &.size-1of1{
+                .et_pb_post{
+                    margin-bottom: 60px !important;
+
+                    &:last-child{
+                        margin-bottom: 30px !important;
+                    }
+                }
+            }
+        }
+
+        .et_pb_post{
+            padding: 0;
+            border: 0;
+
+            .et_pb_image_container{
+                margin: -20px 0 0;
+            }
+
+            a.entry-featured-image-url{
+                overflow: hidden;
+            }
+
+            img{
+                transition: all 0.3s ease-in-out;
+            }
+
+            h2.entry-title{
+                font-size: 1.5rem;
+                padding-bottom: 10px;
+            }
+
+            p.post-meta{
+                padding-bottom: 1em !important;
+
+                @media (max-width: 767px){
+                    padding-bottom: 0.5em !important;
+                }
+            }
+
+            .post-content p{
+                font-size: 0.9375rem;
+            }
+
+            &:hover{
+                img{
+                    transform: scale(1.05);
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}

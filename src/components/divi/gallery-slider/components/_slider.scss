@@ -1,0 +1,98 @@
+.slider {
+    .et-pb-slider-arrows {
+        .et-pb-arrow-prev,
+        .et-pb-arrow-next {
+            opacity: 1;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.15s ease-in-out;
+
+            &:hover {
+                opacity: 0.9;
+                transition: all 0.15s ease-in-out;
+            }
+
+            &::before {
+                position: relative;
+                top: -1px;
+                font-size: 2rem;
+            }
+        }
+
+        .et-pb-arrow-prev {
+            left: 22px;
+
+            &::before {
+                left: -2px;
+            }
+        }
+
+        .et-pb-arrow-next {
+            right: 22px;
+
+            &::before {
+                right: 1px;
+            }
+        }
+    }
+
+    .et-pb-controllers {
+        position: relative;
+        bottom: 60px;
+        max-width: fit-content;
+        margin: auto;
+        padding: 1rem 1rem 0;
+        border-radius: 50px;
+
+        a {
+            width: 8px;
+            height: 8px;
+
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+    }
+    
+    &.dark {
+        .et-pb-arrow-prev,
+        .et-pb-arrow-next {
+            background: #000;
+
+            &::before {
+                color: #fff;
+            }
+        }
+
+        .et-pb-controllers {
+            background: #000;
+
+            a {
+                background: #fff;
+            }
+        }
+    }
+
+    &.light {
+        .et-pb-arrow-prev,
+        .et-pb-arrow-next {
+            background: #fff;
+
+            &::before {
+                color: #000;
+            }
+        }
+
+        .et-pb-controllers {
+            background: #fff;
+
+            a {
+                background: #000;
+            }
+        }
+    }
+}

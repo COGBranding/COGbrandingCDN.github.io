@@ -1,0 +1,131 @@
+// Import this file into the 'pages' folder and import in the main.scss file.
+$border-color: #dadada !important;
+$height: 50px;
+$active-bg: #000 !important;
+$active-color: #fff !important;
+
+.blog {
+
+    &__posts {
+        .dp-dfg-dropdown-label,
+        .dp-dfg-search-input {
+            background: #fff !important;
+            border-color: $border-color;
+            padding: 16px !important;
+            font-size: 14px !important;
+            height: $height;
+            display: flex;
+            align-items: center;
+
+            &::after {
+                padding-right: 10px;
+                font-size: 18px !important;
+                height: $height;
+                display: flex;
+                align-items: center;
+                top: 0 !important;
+                margin-top: 0 !important;
+            }
+        }
+
+        .dp-dfg-filter-link {
+            font-size: 14px !important;
+        }
+
+        .dp-dfg-search {
+            @media (max-width: 479px) {
+                margin-top: -1em !important;
+            }
+        }
+
+        .dp-dfg-search-icon {
+            font-size: 1rem !important;
+            padding: 10px !important;
+            background: transparent !important;
+            border: 1px solid $border-color;
+            border-left: none !important;
+            transition: all 0.1s ease-in-out;
+
+            &:hover {
+                background: #f5f5f5 !important;
+                transition: all 0.1s ease-in-out;
+            }
+        }
+
+        .dp-dfg-item {
+            border-color: $border-color;
+            transition: all 0.1s ease-in-out;
+
+            &:hover {
+                border-color: #000 !important;
+                transition: all 0.1s ease-in-out;
+            }
+        }
+
+        .dp-dfg-image {
+            padding-bottom: 1rem !important;
+        }
+
+        .dp-dfg-header {
+            padding-bottom: 0 !important;
+
+            h2.entry-title {
+                font-size: 1.25rem;
+            }
+        }
+
+        .dp-dfg-meta {
+            font-size: 13px;
+            padding-bottom: 0.5rem;
+        }
+
+        .dp-dfg-content {
+            padding-bottom: 1rem;
+        }
+
+        .et_pb_button_wrapper {
+            text-align: left;
+            padding-bottom: 1rem;
+        }
+
+        .dp-dfg-more-button {
+            @extend .btn;
+            @extend .btn--primary;
+        }
+    }
+
+    .pagination {
+        padding-top: 2rem !important;
+
+        &-item {
+            a {
+                font-size: 14px !important;
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                width: 42px;
+                height: 42px !important;
+                font-size: 14px;
+                border-radius: 50% !important;
+                border-color: $border-color;
+                transition: all 0.1s ease-in-out !important;
+
+                &:hover {
+                    transition: all 0.1s ease-in-out !important;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+
+            &.active {
+                a {
+                    background: $active-bg;
+                    color: $active-color;
+                    border: none !important;
+                }
+            }
+        }
+    }
+}
