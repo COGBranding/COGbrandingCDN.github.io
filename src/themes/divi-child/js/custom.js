@@ -7,7 +7,7 @@ console.log(`
                 Designed & Developed by COG Branding
                     https://cogbranding.com.au`);
 
-//repeat following code if mulitple files needs to be called
+//repeat following code if multiple files needs to be called
 // add the script location in the getScript("") function
 $.getScript(
     "https://cogbranding.github.io/COGbrandingCDN.github.io/",
@@ -16,3 +16,13 @@ $.getScript(
         currentYear();
     }
 );
+
+// Uncomment the below to use with Slick, feel free to delete if your site is not using Slick!
+// jQuery(function ($) {
+//     $(".class-name-here").slick({
+//         slidesToShow: 3,
+//         slidesToScroll: 1,
+//         autoplay: false,
+//         dots: false,
+//     });
+// });

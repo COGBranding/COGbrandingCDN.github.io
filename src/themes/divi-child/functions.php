@@ -12,6 +12,8 @@ add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles', 99 );
 
 function my_theme_enqueue_cdn_style() {
 	wp_enqueue_style( 'cog-cdn-normalize', 'https://cogbranding.github.io/COGbrandingCDN.github.io/src/cdn/css/divi/diviNormalize.css' );
+    // Uncomment following if using slick
+    // wp_enqueue_style( 'slick-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' );
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_cdn_style', 999 );
 
@@ -19,6 +21,8 @@ function my_theme_enqueue_scripts() {
     wp_enqueue_script( 'custom', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'cog-cdn-function','https://cogbranding.github.io/COGbrandingCDN.github.io/src/cdn/js/divi/diviFunction.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'scroll-reveal','https://unpkg.com/scrollreveal', array( 'jquery' ), true );
+    // Uncomment following if using slick
+    // wp_enqueue_script( 'slick-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), true );
 }
 add_action( 'wp_footer', 'my_theme_enqueue_scripts' );
 
