@@ -1,0 +1,74 @@
+.statistics {
+    &__slider {
+        .slick-prev,
+        .slick-next {
+            display: block !important;
+            font-size: 0;
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            background-color: $color-maroon;
+            border: 1px solid $color-maroon;
+            border-radius: 50%;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            cursor: pointer;
+
+            &:hover {
+                background-image: linear-gradient(rgb(0 0 0 / 10%) 0 0);
+            }
+
+            &::before {
+                font-family: "ETmodules";
+                font-size: 24px;
+                color: $color-white;
+            }
+        }
+
+        .slick-prev {
+            display: none !important;
+        }
+
+        .et-waypoint:not(.et_pb_counters) {
+            opacity: 1;
+        }
+
+        .slick-prev {
+            &::before {
+                content: "\34";
+            }
+        }
+
+        .slick-next {
+            &::before {
+                content: "\35";
+            }
+        }
+
+        .slick-list {
+            padding: 0 10% 0 0 !important;
+            cursor: grab;
+            cursor: -moz-grab;
+            cursor: -webkit-grab;
+
+            @media all and (max-width: $breakpoint-mobile) {
+                padding: 0 20% 0 0 !important;
+            }
+
+            &:active {
+                cursor: grabbing;
+                cursor: -moz-grabbing;
+                cursor: -webkit-grabbing;
+            }
+        }
+
+        .slick-track {
+            display: flex !important;
+        }
+
+        .slick-slide {
+            height: inherit !important;
+        }
+    }
+}

@@ -18,11 +18,25 @@ $.getScript(
 );
 
 // Uncomment the below to use with Slick, feel free to delete if your site is not using Slick!
-// jQuery(function ($) {
-//     $(".class-name-here").slick({
+// $(document).ready(function () {
+//     $(".statistics__slider").slick({
 //         slidesToShow: 3,
 //         slidesToScroll: 1,
 //         autoplay: false,
 //         dots: false,
+//         responsive: [
+//             {
+//                 breakpoint: 767,
+//                 settings: {
+//                     slidesToShow: 2,
+//                 },
+//             },
+//             {
+//                 breakpoint: 479,
+//                 settings: {
+//                     slidesToShow: 1,
+//                 },
+//             },
+//         ],
 //     });
 // });
