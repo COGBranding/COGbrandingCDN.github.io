@@ -1,0 +1,256 @@
+$inner-component-class: ".dp-dfg";
+
+.product-grid {
+    padding: 1rem 0 !important;
+
+    @media all and (min-width: $breakpoint-desktop) {
+        padding: 4rem 0 2rem !important;
+    }
+
+    &__row {
+        padding: 1rem 0 !important;
+    }
+
+    &__items {
+        #{$inner-component-class} {
+            &-filters {
+                &-dropdown {
+                    @media all and (max-width: $breakpoint-mobile) {
+                        margin-bottom: 10px !important;
+                    }
+                    .dp-dfg-dropdown-label {
+                        height: 55px;
+                        background-color: $color-white;
+                        border: 1px solid $color-border;
+                        border-radius: 10px;
+                        box-shadow: $shadow-xs;
+                        padding: 16px;
+                        font-size: 0.9375rem;
+                        font-weight: 500;
+                        line-height: 1.5rem;
+                        color: $color-black;
+                        transition: all 0.1s ease-in-out;
+
+                        &:hover,
+                        &:focus {
+                            box-shadow: $shadow-lg;
+                            transition: all 0.1s ease-in-out;
+                        }
+
+                        &::after {
+                            right: 10px;
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    .dp-dfg-level {
+                        border: 1px solid $color-border !important;
+                        border-radius: 10px;
+                        box-shadow: $shadow-3xl !important;
+
+                        li {
+                            a {
+                                padding: 16px !important;
+                                font-size: 0.9375rem !important;
+                                font-weight: 500 !important;
+                                color: $color-black !important;
+                                transition: all 0.1s ease-in-out !important;
+
+                                &:hover {
+                                    background-color: rgb(245, 245, 245);
+                                    transition: all 0.1s ease-in-out !important;
+                                }
+
+                                &.active {
+                                    background-color: $color-white;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .dp-dfg-search {
+                    &-input {
+                        height: 55px;
+                        background-color: $color-white;
+                        border: 1px solid $color-border;
+                        border-right-width: 0;
+                        border-radius: 10px 0 0 10px;
+                        box-shadow: $shadow-xs;
+                        padding: 16px;
+                        font-size: 0.9375rem;
+                        font-weight: 500;
+                        transition: all 0.1s ease-in-out;
+
+                        &:hover,
+                        &:focus {
+                            box-shadow: $shadow-lg;
+                            transition: all 0.1s ease-in-out;
+                        }
+
+                        &::placeholder {
+                            font-size: 0.9375rem;
+                            font-weight: 500;
+                            color: $color-black;
+                            opacity: 1;
+                        }
+                    }
+
+                    .dp-dfg-search-icon {
+                        background-color: $color-white;
+                        border: 1px solid $color-border;
+                        padding: 1rem;
+                        border-radius: 0 10px 10px 0;
+                        color: $color-black;
+                    }
+                }
+            }
+
+            &-items {
+                .dp-dfg-item {
+                    border-radius: 20px;
+                    transition: all 0.1s ease-in-out;
+
+                    &:hover {
+                        box-shadow: $shadow-3xl;
+                        transition: all 0.1s ease-in-out;
+
+                        @media all and (min-width: $breakpoint-desktop) {
+                            .dp-dfg-custom-content {
+                                margin-bottom: 0 !important;
+                                transition: all 0.2s ease-in-out;
+                            }
+
+                            .dp-dfg-more-button {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+
+                .dp-dfg-image {
+                    order: 1;
+                    margin-bottom: 0 !important;
+                }
+
+                .dp-dfg-overlay {
+                    display: none;
+                }
+
+                .dp-dfg-custom-content {
+                    order: 3;
+                    padding-bottom: 0 !important;
+                    transition: all 0.2s ease-in-out;
+
+                    @media all and (min-width: $breakpoint-desktop) {
+                        margin-bottom: -58px !important;
+                    }
+                }
+
+                .dp-dfg-header {
+                    order: 2;
+                    padding: 1.25rem 1rem 0;
+
+                    h2 {
+                        font-size: 1.0625rem;
+                        font-weight: 400;
+                        color: $color-grey;
+
+                        @media all and (max-width: $breakpoint-tablet-sm) {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                .dp-dfg-custom-field {
+                    padding: 0.25rem 1rem 1rem;
+
+                    &-label,
+                    &-value {
+                        font-size: 1.125rem;
+                        font-weight: 700;
+                        color: $color-black;
+
+                        @media all and (max-width: $breakpoint-tablet) {
+                            font-size: 1.125rem;
+                        }
+                    }
+                }
+
+                .read-more-wrapper {
+                    order: 4;
+                    padding: 0 1rem 1.5rem !important;
+
+                    .dp-dfg-more-button {
+                        width: 100%;
+                        background-color: $color-white;
+                        border: 1px solid $color-border;
+                        border-radius: 5px;
+                        padding: 10px 20px !important;
+                        box-shadow: $shadow-xs;
+                        color: $color-black;
+                        font-size: 1rem;
+                        font-weight: 600;
+
+                        @media all and (min-width: $breakpoint-desktop) {
+                            background-color: $color-yellow;
+                            border: 1px solid $color-yellow;
+                            opacity: 0;
+                        }
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .dp-dfg-pagination {
+            margin-top: 2rem;
+
+            @media all and (max-width: $breakpoint-tablet) {
+                margin: 1rem 0;
+            }
+
+            li.pagination-item {
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+
+                a {
+                    display: flex !important;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $color-white !important;
+                    color: $color-grey;
+                    border: 1px solid $color-border !important;
+                    padding: 0 !important;
+                    width: 42px;
+                    height: 42px !important;
+                    border-radius: 50% !important;
+                    box-shadow: $shadow-xs;
+                    font-size: 1rem !important;
+                    transition: all 0.1s ease-in-out;
+
+                    &:hover {
+                        box-shadow: $shadow-lg;
+                        transition: all 0.1s ease-in-out;
+                    }
+                }
+
+                &.active {
+                    a {
+                        background-color: $color-yellow !important;
+                        color: $color-black;
+                        border: 1px solid $color-yellow !important;
+
+                        &:hover {
+                            box-shadow: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
