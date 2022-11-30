@@ -1,0 +1,136 @@
+:root {
+    --black: #231f20;
+    --yellow: #fad604;
+
+    --info-l1: #f0f5ff;
+    --info-l2: #89a7e0;
+    --info: #2e5aac;
+    --error-l1: #feefef;
+    --error-l2: #f48989;
+    --error: #da1414;
+    --success-l1: #edf9f0;
+    --success-l2: #5aca75;
+    --success: #287d3c;
+}
+
+body.login {
+    font-family: "Nunito Sans", sans-serif;
+}
+
+#login {
+    width: 90%;
+    max-width: 500px;
+    padding-top: 3rem;
+}
+
+.login h1 a {
+    background-image: none, url("/wp-content/uploads/2022/11/logo-blk.svg");
+    width: unset;
+    height: unset;
+    font-size: 36px;
+    background-size: 140px;
+    cursor: none;
+    pointer-events: none;
+}
+
+.login .message,
+.login #login_error,
+.login .success {
+    border-left: 0;
+    border-radius: 10px;
+}
+
+.login .message {
+    background-color: var(--info-l1);
+    border: 1px solid var(--info-l2);
+    color: var(--info);
+}
+
+.login #login_error {
+    background-color: var(--error-l1);
+    border: 1px solid var(--error-l2);
+    color: var(--error);
+}
+
+.login .success {
+    background-color: var(--success-l1);
+    border: 1px solid var(--success-l2);
+    color: var(--success);
+}
+
+.login form {
+    background-color: #fff;
+    border: 1px solid #d0d5dd;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.login label {
+    color: var(--black);
+    font-size: 0.9375rem;
+    font-weight: 600;
+}
+
+.login input {
+    background-color: #fff;
+    border: 1px solid #d0d5dd;
+    border-radius: 5px;
+    height: 50px !important;
+    font-size: 1rem !important;
+    margin-top: 0.5rem;
+}
+.login input:hover,
+.login input:focus {
+    border: 1px solid var(--black);
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+.login .user-pass-wrap {
+    margin: 0.5rem 0;
+}
+.login button.wp-hide-pw {
+    color: var(--black) !important;
+    height: 50px !important;
+}
+.login button.wp-hide-pw:focus {
+    border-color: var(--black) !important;
+    box-shadow: 0 0 0 1px var(--black) !important;
+}
+
+.login input[type="checkbox"]:checked::before {
+    height: 2rem;
+    width: 1.75rem;
+}
+
+.login input.button-primary {
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+    color: var(--black);
+    padding: 0 20px !important;
+    font-size: 0.875rem !important;
+    font-weight: 600;
+}
+.login input.button-primary:hover {
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+    color: var(--black);
+    opacity: 0.75;
+}
+.login input.button-primary:focus {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 3px var(--black);
+}
+
+.login input#rememberme {
+    width: 24px !important;
+    height: 24px !important;
+}
+.login label[for="rememberme"] {
+    position: relative;
+    top: 7px;
+    padding-left: 0.25rem;
+}
+
+.login #backtoblog,
+.login #nav {
+    display: none;
+}
