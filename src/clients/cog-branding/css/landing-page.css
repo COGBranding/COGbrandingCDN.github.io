@@ -17,6 +17,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit");
 
 /* fullwidth containers for specific pages */
+/* cog digital */
 .page-id-8063 .g1-layout-inner,
 .page-id-8104 .g1-layout-inner,
 .page-id-8121 .g1-layout-inner,
@@ -28,12 +29,16 @@
 .page-id-8268 .g1-layout-inner,
 .page-id-8274 .g1-layout-inner,
 .page-id-8280 .g1-layout-inner,
-.page-id-8611 .g1-layout-inner {
+
+/* cog design */
+.page-id-8611 .g1-layout-inner,
+.page-id-8621 .g1-layout-inner {
     width: 100% !important;
     max-width: 1920px !important;
 }
 
 /* hide sidebar on specific pages */
+/* cog digital */
 .page-id-8104 #primary,
 .page-id-8121 #primary,
 .page-id-8128 #primary,
@@ -44,9 +49,14 @@
 .page-id-8268 #primary,
 .page-id-8274 #primary,
 .page-id-8280 #primary,
-.page-id-8611 #primary {
+
+/* cog design */
+.page-id-8611 #primary,
+.page-id-8621 #primary {
     width: 100% !important;
 }
+
+/* cog digital */
 .page-id-8104 .g1-sidebar,
 .page-id-8121 .g1-sidebar,
 .page-id-8128 .g1-sidebar,
@@ -57,7 +67,10 @@
 .page-id-8268 .g1-sidebar,
 .page-id-8274 .g1-sidebar,
 .page-id-8280 .g1-sidebar,
-.page-id-8611 .g1-sidebar {
+
+/* cog design */
+.page-id-8611 .g1-sidebar,
+.page-id-8621 .g1-sidebar {
     display: none !important;
 }
 
@@ -292,6 +305,9 @@
 }
 .sec-content__content a:hover {
     text-decoration: none;
+}
+.sec-content__content br {
+    display: none;
 }
 
 .sec-content__icon {
