@@ -723,6 +723,11 @@
     transition: all 0.1s ease-in-out;
 }
 
+.sec-contact__form textarea {
+    height: 150px;
+    padding: 16px;
+}
+
 .sec-contact__form input[type="submit"] {
     padding: 14px 28px;
     border: none !important;
