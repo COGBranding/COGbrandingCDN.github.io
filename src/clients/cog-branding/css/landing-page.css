@@ -799,7 +799,8 @@ body.single-our-work .g1-content h6 {
 
 .single-our-work .g1-precontent,
 .single-our-work .g1-nav-breadcrumbs,
-.page-id-8246 .g1-nav-breadcrumbs {
+.page-id-8246 .g1-nav-breadcrumbs ,
+.page-id-7959 .g1-nav-breadcrumbs{
     display: none !important;
 }
 
