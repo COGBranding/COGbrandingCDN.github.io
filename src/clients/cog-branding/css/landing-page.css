@@ -358,7 +358,7 @@
 .sec-content.dark p,
 .sec-content.dark p a,
 .sec-content.dark ul,
-.sec-contact.dark ul a,
+.sec-contact.dark li a,
 .sec-content.dark ol {
     color: var(--color-white) !important;
 }
@@ -553,6 +553,9 @@
 
 .sec-cards .sec-content__content {
     padding-bottom: 32px;
+}
+.sec-cards .sec-content__content p {
+    margin-top: 0;
 }
 
 @media all and (max-width: 767px) {
