@@ -658,6 +658,9 @@
     width: 80% !important;
 }
 
+.sec-media-with-text .sec-content__content {
+    padding-bottom: 32px;
+}
 .sec-media-with-text .sec-content__content h2 {
     text-align: center;
 }
