@@ -358,7 +358,7 @@
 .sec-content.dark p,
 .sec-content.dark p a,
 .sec-content.dark ul,
-.sec-contact.dark li a,
+.sec-content.dark li a,
 .sec-content.dark ol {
     color: var(--color-white) !important;
 }
