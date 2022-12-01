@@ -338,7 +338,7 @@
 }
 
 .sec-content__content ul,
-.sec-content__link-list ul {
+.sec-content__content ol {
     font-family: var(--font-inter);
     font-size: 16px;
     font-weight: 400;
@@ -346,8 +346,7 @@
     color: var(--color-navy);
     opacity: 0.75;
 }
-.sec-content__content ul li,
-.sec-content__link-list ul li {
+.sec-content__content li {
     margin: 4px 0;
 }
 
