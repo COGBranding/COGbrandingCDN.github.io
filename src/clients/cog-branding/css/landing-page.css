@@ -32,7 +32,8 @@
 
 /* cog design */
 .page-id-8611 .g1-layout-inner,
-.page-id-8621 .g1-layout-inner {
+.page-id-8621 .g1-layout-inner,
+.page-id-8647 .g1-layout-inner {
     width: 100% !important;
     max-width: 1920px !important;
 }
@@ -52,7 +53,8 @@
 
 /* cog design */
 .page-id-8611 #primary,
-.page-id-8621 #primary {
+.page-id-8621 #primary,
+.page-id-8647 #primary {
     width: 100% !important;
 }
 
@@ -70,7 +72,8 @@
 
 /* cog design */
 .page-id-8611 .g1-sidebar,
-.page-id-8621 .g1-sidebar {
+.page-id-8621 .g1-sidebar,
+.page-id-8647 .g1-sidebar {
     display: none !important;
 }
 
