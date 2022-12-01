@@ -43,7 +43,7 @@
     .et-pb-controllers {
         position: relative;
         bottom: 60px;
-        max-width: fit-content;
+        max-width: 280px;
         margin: auto;
         padding: 1rem 1rem 0;
         border-radius: 50px;
@@ -57,7 +57,7 @@
             }
         }
     }
-    
+
     &.dark {
         .et-pb-arrow-prev,
         .et-pb-arrow-next {

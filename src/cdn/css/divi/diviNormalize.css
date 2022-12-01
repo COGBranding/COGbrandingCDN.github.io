@@ -324,7 +324,7 @@
 
 /* Helper Classes - max-width & margin */
 .mw-300 {
-    max-width: 300px;
+    max-width: 280px;
 }
 
 .mw-350 {
@@ -393,7 +393,7 @@
 
 @media (min-width: 981px) {
     .mw-300-d {
-        max-width: 300px;
+        max-width: 280px;
     }
 
     .mw-350-d {
