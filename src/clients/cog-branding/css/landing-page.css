@@ -650,6 +650,7 @@
 }
 .sec-blog__posts.blue article:hover .g1-button {
     background-color: var(--color-blue);
+    color: var(--color-white);
 }
 
 .sec-blog__posts.purple .entry-footer .g1-button {
@@ -661,6 +662,7 @@
 }
 .sec-blog__posts.purple article:hover .g1-button {
     background-color: var(--color-purple);
+    color: var(--color-white);
 }
 
 @media all and (max-width: 767px) {
