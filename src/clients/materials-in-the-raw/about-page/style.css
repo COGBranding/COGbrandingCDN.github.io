@@ -12,8 +12,7 @@
     max-width: 1920px;
 }
 .cms-about-materials-in-the-raw .page-title-wrapper {
-    max-width: 1320px;
-    margin-left: auto;
+    display: none;
 }
 
 /* variables  */
