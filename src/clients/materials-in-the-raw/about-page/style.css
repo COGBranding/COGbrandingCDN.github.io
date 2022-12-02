@@ -5,11 +5,6 @@
     box-sizing: border-box;
 }
 
-.about-page__wrapper body {
-    font-family: "Open Sans", sans-serif;
-    font-display: swap;
-}
-
 /* extend page width for specific pages */
 .cms-about-materials-in-the-raw .page-main {
     padding-left: 0;
