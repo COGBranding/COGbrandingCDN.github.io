@@ -118,6 +118,7 @@
 .contact__links {
     margin-bottom: auto;
 }
+.contact__links__link p::before,
 .contact__links__link a::before {
     width: 24px;
     height: 24px;
@@ -134,6 +135,9 @@
 }
 .contact__links__link.location a::before {
     content: url(https://raw.githubusercontent.com/COGBranding/COGbrandingCDN.github.io/main/src/clients/materials-in-the-raw/contact-page/assets/icon-location.svg);
+}
+.contact__links__link.hours p::before {
+    content: url(https://raw.githubusercontent.com/COGBranding/COGbrandingCDN.github.io/main/src/clients/materials-in-the-raw/contact-page/assets/icon-hours.svg);
 }
 .contact__links__link p,
 .contact__links__link a {
@@ -171,9 +175,6 @@
 }
 .contact__socials__item.instagram a::before {
     content: url(https://raw.githubusercontent.com/COGBranding/COGbrandingCDN.github.io/main/src/clients/materials-in-the-raw/contact-page/assets/icon-instagram.svg);
-}
-.contact__socials__item.hours p::before {
-    content: url(https://raw.githubusercontent.com/COGBranding/COGbrandingCDN.github.io/main/src/clients/materials-in-the-raw/contact-page/assets/icon-hours.svg);
 }
 .contact__socials__item a:hover::before {
     background-color: var(--color-orange);
