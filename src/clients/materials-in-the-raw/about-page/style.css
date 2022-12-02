@@ -188,6 +188,12 @@
     padding-bottom: 40px;
 }
 
+@media all and (max-width: 767px) {
+    .content__content h2 {
+        padding-bottom: 20px;
+    }
+}
+
 /* images section */
 .images__flex-wrapper {
     display: flex;
@@ -277,6 +283,9 @@
 }
 
 @media all and (max-width: 767px) {
+    .cards__heading {
+        padding-bottom: 16px;
+    }
     .cards__flex-wrapper {
         flex-direction: column;
     }
