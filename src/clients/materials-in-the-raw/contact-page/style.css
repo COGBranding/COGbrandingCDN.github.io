@@ -128,13 +128,13 @@
     float: left;
 }
 .contact__links__link.phone a::before {
-    content: url(./assets/icon-phone.svg);
+    content: url(https://raw.githubusercontent.com/COGBranding/COGbrandingCDN.github.io/main/src/clients/materials-in-the-raw/contact-page/assets/icon-phone.svg);
 }
 .contact__links__link.email a::before {
-    content: url(./assets/icon-email.svg);
+    content: url(https://raw.githubusercontent.com/COGBranding/COGbrandingCDN.github.io/main/src/clients/materials-in-the-raw/contact-page/assets/icon-email.svg);
 }
 .contact__links__link.location a::before {
-    content: url(./assets/icon-location.svg);
+    content: url(https://raw.githubusercontent.com/COGBranding/COGbrandingCDN.github.io/main/src/clients/materials-in-the-raw/contact-page/assets/icon-location.svg);
 }
 .contact__links__link a {
     font-size: 18px;
@@ -167,16 +167,15 @@
     transition: all 0.1s ease-in-out;
 }
 .contact__socials__item.facebook a::before {
-    content: url(./assets/icon-facebook.svg);
+    content: url(https://raw.githubusercontent.com/COGBranding/COGbrandingCDN.github.io/main/src/clients/materials-in-the-raw/contact-page/assets/icon-facebook.svg);
 }
 .contact__socials__item.instagram a::before {
-    content: url(./assets/icon-instagram.svg);
+    content: url(https://raw.githubusercontent.com/COGBranding/COGbrandingCDN.github.io/main/src/clients/materials-in-the-raw/contact-page/assets/icon-instagram.svg);
 }
 .contact__socials__item a:hover::before {
     background-color: var(--color-orange);
     transition: all 0.1s ease-in-out;
 }
-
 @media all and (max-width: 767px) {
     .contact .row {
         width: 100%;
