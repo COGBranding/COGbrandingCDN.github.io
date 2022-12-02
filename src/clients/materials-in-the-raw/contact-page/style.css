@@ -183,6 +183,20 @@
 .contact__form p {
     display: none;
 }
+.contact__form .fieldset {
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact__form .field {
+    width: 100%;
+}
+.contact__form .field.name {
+    width: 48%;
+    margin-right: 2%;
+}
+.contact__form .field.email {
+    width: 50%;
+}
 .contact__form label {
     font-size: 15px;
     font-weight: 600;
@@ -226,8 +240,9 @@
     height: unset;
 }
 .contact__form button.submit:hover {
-    background: linear-gradient(rgb(0 0 0 / 5%) 0 0);
+    background: linear-gradient(rgb(0 0 0 / 10%) 0 0);
     background-color: var(--color-orange);
+    border: 1px solid var(--color-orange);
 }
 
 @media all and (max-width: 980px) {
@@ -249,5 +264,9 @@
     .contact__content,
     .contact__links {
         margin-bottom: 40px;
+    }
+    .contact__form .field.name {
+        width: 100%;
+        margin-right: 0;
     }
 }
