@@ -10,6 +10,13 @@
     font-display: swap;
 }
 
+/* extend page width for specific pages */
+.cms-about-materials-in-the-raw .page-main {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1920px;
+}
+
 /* variables  */
 :root {
     --color-black: #111;
