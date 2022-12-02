@@ -289,4 +289,7 @@
     .cards__flex-wrapper {
         flex-direction: column;
     }
+    .cards__flex-wrapper:last-of-type {
+        padding-top: 0;
+    }
 }
