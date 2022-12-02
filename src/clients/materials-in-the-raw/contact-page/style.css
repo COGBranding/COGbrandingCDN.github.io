@@ -92,7 +92,6 @@
     padding: 0;
     display: flex;
     justify-content: space-between;
-    height: 500px;
 }
 .contact__col {
     padding: 40px;
@@ -136,11 +135,12 @@
 .contact__links__link.location a::before {
     content: url(https://raw.githubusercontent.com/COGBranding/COGbrandingCDN.github.io/main/src/clients/materials-in-the-raw/contact-page/assets/icon-location.svg);
 }
+.contact__links__link p,
 .contact__links__link a {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.3;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
     color: var(--color-white);
     text-decoration: none;
     transition: all 0.1s ease-in-out;
@@ -172,24 +172,28 @@
 .contact__socials__item.instagram a::before {
     content: url(https://raw.githubusercontent.com/COGBranding/COGbrandingCDN.github.io/main/src/clients/materials-in-the-raw/contact-page/assets/icon-instagram.svg);
 }
+.contact__socials__item.hours p::before {
+    content: url(https://raw.githubusercontent.com/COGBranding/COGbrandingCDN.github.io/main/src/clients/materials-in-the-raw/contact-page/assets/icon-hours.svg);
+}
 .contact__socials__item a:hover::before {
     background-color: var(--color-orange);
     transition: all 0.1s ease-in-out;
 }
-@media all and (max-width: 767px) {
+@media all and (max-width: 980px) {
     .contact .row {
         width: 100%;
         padding: 0;
     }
     .contact .contact__flex-wrapper {
         flex-direction: column;
+        border-radius: 10px 10px 0 0;
     }
     .contact__col {
         width: 100%;
         padding: 40px 20px;
     }
     .contact__col.bg-dark {
-        border-radius: 0;
+        border-radius: 10px 10px 0 0;
     }
     .contact__content,
     .contact__links {
