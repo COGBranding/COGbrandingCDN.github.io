@@ -265,7 +265,8 @@
     .contact__links {
         margin-bottom: 40px;
     }
-    .contact__form .field.name {
+    .contact__form .field.name,
+    .contact__form .field.email {
         width: 100%;
         margin-right: 0;
     }
