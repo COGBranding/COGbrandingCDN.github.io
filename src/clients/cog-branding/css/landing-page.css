@@ -829,6 +829,7 @@ body.single-our-work .g1-content h6 {
 .single-our-work .g1-precontent,
 .single-our-work .g1-nav-breadcrumbs,
 .page-id-8246 .g1-nav-breadcrumbs,
+.page-id-8676 .g1-nav-breadcrumbs,
 .page-id-7959 .g1-nav-breadcrumbs {
     display: none !important;
 }
@@ -981,11 +982,13 @@ body.single-our-work .g1-content h6 {
 
 /* projects page */
 .page-id-7959 .g1-precontent,
+.page-id-8676 .g1-precontent,
 .page-id-8246 .g1-precontent {
     display: none;
 }
 
 .page-id-7959 .g1-layout-inner h1,
+.page-id-8676 .g1-layout-inner h1,
 .page-id-8246 .g1-layout-inner h1 {
     font-family: var(--font-inter);
     font-size: 48px;
@@ -995,6 +998,7 @@ body.single-our-work .g1-content h6 {
     color: #001537 !important;
 }
 .page-id-8246 .g1-layout-inner,
+.page-id-8676 .g1-layout-inner,
 .page-id-7959 .g1-layout-inner {
     width: 100% !important;
 }
@@ -1096,7 +1100,7 @@ body.single-our-work .g1-content h6 {
         max-width: 90%;
     }
 
-    .page-id-8246 .g1-layout-inner h1 {
+    .page-id-8246 .g1-layout-inner h1 , .page-id-7959 .g1-layout-inner h1 ,.page-id-8676 .g1-layout-inner h1 {
         font-size: 36px;
     }
 }
