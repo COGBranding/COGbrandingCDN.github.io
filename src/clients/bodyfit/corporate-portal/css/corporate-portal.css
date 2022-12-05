@@ -1,0 +1,404 @@
+/* <!--Corporate Portal Css--> */
+body.single-corporate-portal #main-content {
+    background: #f5f5f5 !important;
+    min-height: 800px !important;
+}
+
+.corporate-portal.post-password-required {
+    background: #fff !important;
+    padding: 24px 30px 0px 30px !important;
+    max-width: 550px !important;
+    margin: 80px auto auto !important;
+    border: 1px solid #d0d5dd !important;
+    border-radius: 30px !important;
+}
+
+.corporate-portal-archive .corporate-portal.post-password-required,
+.corporate-portal-archive .corporate-portal.post-password-protected {
+    background: #fff !important;
+    max-width: 500px !important;
+    border: 1px solid #d0d5dd !important;
+    border-radius: 30px !important;
+    padding: 16px 0 !important;
+}
+.corporate-portal.post-password-required .entry-title {
+    font-size: 24px !important;
+    padding-bottom: 0px !important;
+    font-weight: 700 !important;
+}
+
+.corporate-portal.post-password-required .entry-title::after {
+    content: "To view this page, enter the password provided to you below.";
+    color: #342e30;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    display: block;
+    margin-top: 6px;
+    letter-spacing: 0;
+}
+@media all and (max-width: 768px) {
+    .corporate-portal.post-password-required .entry-title {
+        font-size: 18px;
+    }
+
+    .corporate-portal.post-password-required .entry-title::after {
+        font-size: 14px;
+    }
+}
+.corporate-portal.post-password-required .et_password_protected_form p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.corporate-portal.post-password-required .et_pb_row {
+    width: 100% !important;
+    padding-top: 0px !important;
+}
+.corporate-portal.post-password-required .et_pb_section {
+    padding: 0 !important;
+}
+.et_password_protected_form label {
+    display: block;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 150%;
+    color: #000000;
+}
+
+.et_password_protected_form p input {
+    height: 51px !important;
+    border: 1px solid #d0d5dd !important;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05) !important;
+    border-radius: 5px !important;
+    margin-top: 6px;
+    color: #000 !important;
+}
+.et_password_protected_form p .et_pb_button {
+    width: 100%;
+    background: #fad604;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 5px;
+    border: 1px solid #fad604 !important;
+    color: #231f20 !important;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+}
+.et_password_protected_form p .et_pb_button:hover {
+    border: 1px solid #231f20 !important;
+}
+
+body.et_pb_pagebuilder_layout.et_pb_show_title
+    .post-password-required
+    .et_password_protected_form
+    h1,
+body:not(.et_pb_pagebuilder_layout)
+    .post-password-required
+    .et_password_protected_form
+    p {
+    display: none;
+}
+body.et_pb_pagebuilder_layout.et_pb_show_title
+    .post-password-required
+    .et_password_protected_form
+    h1,
+body:not(.et_pb_pagebuilder_layout)
+    .post-password-required
+    .et_password_protected_form
+    form
+    p {
+    display: block;
+}
+
+.corporate-portal.post-password-protected .et_post_meta_wrapper {
+    display: none;
+}
+
+.corporate-portal.post-password-required .entry-content {
+    padding-top: 30px !important;
+}
+.corporate-portal .et_post_meta_wrapper img {
+    max-width: 80px !important;
+    margin-left: 0px !important;
+    margin-right: 24px !important;
+    padding: 16px;
+    background: #fff;
+    border-radius: 5px;
+}
+.single-corporate-portal #page-container {
+    background: #f5f5f5 !important;
+}
+
+.single-corporate-portal #main-content .container {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 0px !important;
+}
+
+.single-corporate-portal #main-content .container #left-area,
+.single-corporate-portal
+    #main-content
+    .container
+    #left-area
+    .post-password-protected
+    .entry-content {
+    padding-top: 0px !important;
+}
+
+.single-corporate-portal
+    #main-content
+    .container
+    #left-area
+    .entry-content
+    .hero-section-row,
+.single-corporate-portal
+    #main-content
+    .container
+    #left-area
+    .entry-content
+    .body-section {
+    max-width: 1920px;
+    width: 90%;
+    margin: 0 auto !important;
+}
+
+.single-corporate-portal
+    #main-content
+    .container
+    #left-area
+    .entry-content
+    .hero-section {
+    background: #231f20 !important;
+    padding: 50px 0;
+}
+
+.single-corporate-portal
+    #main-content
+    .container
+    #left-area
+    .entry-content
+    .body-section {
+    padding: 50px 0 !important;
+    margin-bottom: 132px !important;
+}
+
+.single-corporate-portal
+    #main-content
+    .container
+    #left-area
+    .entry-content
+    .hero-section-row {
+    display: flex;
+    align-items: center;
+}
+
+.single-corporate-portal
+    #main-content
+    .container
+    #left-area
+    .entry-content
+    .hero-section-row
+    .featured_image
+    img {
+    width: 48px;
+}
+
+.single-corporate-portal
+    #main-content
+    .container
+    #left-area
+    .entry-content
+    .hero-section-row
+    .featured_image {
+    padding: 16px;
+    background: #fff;
+    margin-right: 24px;
+    border-radius: 5px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corporate-portal .hero-section-row h2 {
+    color: #fff !important;
+    font-size: 20px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: 120%;
+    padding-bottom: 0px !important;
+}
+
+.corporate-portal .hero-section-row p {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.cm-content-section {
+    padding: 0 0 132px 0 !important;
+    background: #f5f5f5;
+}
+
+.cm-content-section .et_pb_row {
+    padding: 50px 0 !important;
+}
+
+.offer_wrapper {
+    background: #fff;
+    padding: 24px;
+    border: 1px solid #d0d5dd;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.offer_wrapper:hover > .offer_url {
+    background: #fad604;
+    border: 1px solid #fad604;
+    transition: all 0.2s ease-in-out;
+}
+
+.offer_wrapper .offer_title p {
+    font-weight: 600;
+    font-size: 18px;
+}
+.offer_wrapper .offer_url {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: #342e30;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+@media all and (max-width: 768px) {
+    .offer_wrapper {
+        display: block;
+    }
+    .offer_wrapper .offer_title p {
+        margin-bottom: 16px !important;
+        font-size: 16px;
+    }
+    .cm-content-section {
+        padding: 0 0 0 0 !important;
+    }
+}
+
+.corporate-portal-archive .corporate-portal-list-row .dp-dfg-image {
+    display: flex;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #dadada;
+}
+.corporate-portal-archive
+    .corporate-portal-list-row
+    .corporate-portal.post-password-required {
+    padding: 16px 0 !important;
+    margin: 0 0 0 0 !important;
+}
+@media all and (max-width: 479px) {
+    .corporate-portal-archive
+        .corporate-portal-list-row
+        .corporate-portal.post-password-required {
+        margin: 0 0 30px 0 !important;
+    }
+}
+.corporate-portal-archive-page-title,
+.corporate-portal-list-row {
+    padding: 0 !important;
+}
+.corporate-portal-archive-page-title {
+    margin-bottom: 40px !important;
+}
+@media all and (max-width: 479px) {
+    .corporate-portal-archive-page-title {
+        margin-bottom: 50px !important;
+    }
+}
+.et-db #et-boc .et-l .et_pb_column .et_pb_row_inner,
+.et-db #et-boc .et-l .et_pb_row {
+    padding: 30px 0;
+}
+.corporate-portal-archive .corporate-portal-list-row .dp-dfg-header {
+    padding: 16px;
+}
+.corporate-portal-list-row .dp-dfg-header .entry-title::after {
+    content: none !important;
+}
+.corporate-portal-list-row .dp-dfg-item .read-more-wrapper .et_pb_button {
+    width: 100% !important;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05) !important;
+    border-radius: 5px !important;
+    border: 1px solid #d0d5dd !important;
+    color: #231f20 !important;
+    font-family: "Nunito Sans" !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    line-height: 150% !important;
+    padding: 8px !important;
+}
+.corporate-portal-list-row
+    .dp-dfg-item:hover
+    > .read-more-wrapper
+    .et_pb_button {
+    background: #fad604 !important;
+    border: 1px solid #fad604 !important;
+}
+.corporate-portal-list-row .dp-dfg-item .read-more-wrapper {
+    padding: 0 16px !important;
+}
+.corporate-portal-list-row .dp-dfg-item .dp-dfg-header {
+    text-align: center;
+}
+.corporate-portal-list-row .dp-dfg-item .dp-dfg-header h2 {
+    font-style: normal !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 150% !important;
+}
+.corporate-portal-archive-page-title .et_pb_text_inner {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 110%;
+    color: #231f20;
+}
+
+.corporate-portal-archive {
+    background: #f5f5f5 !important;
+}
+
+@media only screen and (min-width: 768px) {
+    .corporate-portal-archive {
+        min-height: 800px;
+    }
+}
