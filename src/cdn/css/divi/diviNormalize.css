@@ -836,3 +836,30 @@ a.footer__content__item {
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
 }
+
+
+/* Divi FilterGrid and Woocommerce Horizontal Display on mobile devices*/
+
+@media(max-width:767px){
+    .horizontalProducts.woocommerce.columns-5  {
+        display: flex;
+        flex-direction: row !important;
+    }
+     .horizontalProducts.dp-dfg-layout-grid .dp-dfg-items, ul.products {
+        display: flex;
+        overflow: auto;
+        align-items: stretch;
+        flex-flow: nowrap;
+        gap:10px;
+    }
+      .horizontalProducts.dp-dfg-layout-grid .dp-dfg-item.product, li.product.type-product  {
+        display: flex;
+        flex-direction: column;
+        min-width: fit-content;
+        max-width: fit-content;
+        text-align: center;
+    }
+    .horizontalProducts .et_pb_shop ul.products li:nth-child(2n+2), .woocommerce-page ul.products li.product:nth-child(n){
+        margin-right: 4% !important;
+    }
+}
