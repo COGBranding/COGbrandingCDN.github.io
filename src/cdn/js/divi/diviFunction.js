@@ -489,7 +489,7 @@ $.fn.isInViewport = function () {
 
 // function to add class horizontalProducts to div
 // please make the correct page checks on the site being implemented to ensure this only applies to required pages and not on all pages
-function addHorizontalScrollClass(){
+function horizontalFeaturedProducts(){
     $('.woocommerce.columns-5').addClass('horizontalProducts');
     $('.dp-dfg-layout-grid').addClass('horizontalProducts');
 }
