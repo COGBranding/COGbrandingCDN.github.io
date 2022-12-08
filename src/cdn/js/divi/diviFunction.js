@@ -485,3 +485,67 @@ $.fn.isInViewport = function () {
     var viewportBottom = viewportTop + $(window).height();
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
+
+
+// function to add class horizontalProducts to div
+// please make the correct page checks on the site being implemented to ensure this only applies to required pages and not on all pages
+function horizontalFeaturedProducts(){
+    $('.woocommerce.columns-5').addClass('horizontalProducts');
+    $('.dp-dfg-layout-grid').addClass('horizontalProducts');
+}
+
+//function to add event listener for horizontal scroll fix for firefox
+
+function scrollFixFirefoxWoocom(){
+    const slider = document.querySelector('.horizontalProducts ul.products.columns-5');
+    let mouseDown = false;
+    let startX, scrollLeft;
+
+    let startDragging = function (e) {
+        mouseDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    };
+    let stopDragging = function (event) {
+        mouseDown = false;
+    };
+
+    slider.addEventListener('mousemove', (e) => {
+    e.preventDefault();
+    if(!mouseDown) { return; }
+        const x = e.pageX - slider.offsetLeft;
+        const scroll = x - startX;
+        slider.scrollLeft = scrollLeft - scroll;
+    });
+
+    slider.addEventListener('mousedown', startDragging, false);
+    slider.addEventListener('mouseup', stopDragging, false);
+    slider.addEventListener('mouseleave', stopDragging, false);
+}
+
+function scrollFixFirefoxdgrid(){
+    const slider = document.querySelector('.horizontalProducts.dp-dfg-layout-grid .dp-dfg-items');
+    let mouseDown = false;
+    let startX, scrollLeft;
+
+    let startDragging = function (e) {
+        mouseDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    };
+    let stopDragging = function (event) {
+        mouseDown = false; 
+    };
+
+    slider.addEventListener('mousemove', (e) => {
+    e.preventDefault();
+    if(!mouseDown) { return; }
+        const x = e.pageX - slider.offsetLeft;
+        const scroll = x - startX;
+        slider.scrollLeft = scrollLeft - scroll;
+    });
+
+    slider.addEventListener('mousedown', startDragging, false);
+    slider.addEventListener('mouseup', stopDragging, false);
+    slider.addEventListener('mouseleave', stopDragging, false);
+}
