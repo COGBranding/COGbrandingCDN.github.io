@@ -881,7 +881,7 @@ a.footer__content__item {
     width: var(--cursor-size);
     height: var(--cursor-size);
     border-radius: var(--cursor-size);
-    background: $designBlue;
+    background: #000;
     transform-origin: center center;
 }
 .goo {
