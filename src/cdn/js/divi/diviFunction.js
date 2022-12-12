@@ -486,18 +486,18 @@ $.fn.isInViewport = function () {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
-
 // function to add class horizontalProducts to div
 // please make the correct page checks on the site being implemented to ensure this only applies to required pages and not on all pages
-function horizontalFeaturedProducts(){
-    $('.woocommerce.columns-5').addClass('horizontalProducts');
-    $('.dp-dfg-layout-grid').addClass('horizontalProducts');
+function horizontalFeaturedProducts() {
+    $(".woocommerce.columns-5").addClass("horizontalProducts");
+    $(".dp-dfg-layout-grid").addClass("horizontalProducts");
 }
 
 //function to add event listener for horizontal scroll fix for firefox
-
-function scrollFixFirefoxWoocom(){
-    const slider = document.querySelector('.horizontalProducts ul.products.columns-5');
+function scrollFixFirefoxWoocom() {
+    const slider = document.querySelector(
+        ".horizontalProducts ul.products.columns-5"
+    );
     let mouseDown = false;
     let startX, scrollLeft;
 
@@ -510,21 +510,25 @@ function scrollFixFirefoxWoocom(){
         mouseDown = false;
     };
 
-    slider.addEventListener('mousemove', (e) => {
-    e.preventDefault();
-    if(!mouseDown) { return; }
+    slider.addEventListener("mousemove", (e) => {
+        e.preventDefault();
+        if (!mouseDown) {
+            return;
+        }
         const x = e.pageX - slider.offsetLeft;
         const scroll = x - startX;
         slider.scrollLeft = scrollLeft - scroll;
     });
 
-    slider.addEventListener('mousedown', startDragging, false);
-    slider.addEventListener('mouseup', stopDragging, false);
-    slider.addEventListener('mouseleave', stopDragging, false);
+    slider.addEventListener("mousedown", startDragging, false);
+    slider.addEventListener("mouseup", stopDragging, false);
+    slider.addEventListener("mouseleave", stopDragging, false);
 }
 
-function scrollFixFirefoxdgrid(){
-    const slider = document.querySelector('.horizontalProducts.dp-dfg-layout-grid .dp-dfg-items');
+function scrollFixFirefoxdgrid() {
+    const slider = document.querySelector(
+        ".horizontalProducts.dp-dfg-layout-grid .dp-dfg-items"
+    );
     let mouseDown = false;
     let startX, scrollLeft;
 
@@ -534,18 +538,77 @@ function scrollFixFirefoxdgrid(){
         scrollLeft = slider.scrollLeft;
     };
     let stopDragging = function (event) {
-        mouseDown = false; 
+        mouseDown = false;
     };
 
-    slider.addEventListener('mousemove', (e) => {
-    e.preventDefault();
-    if(!mouseDown) { return; }
+    slider.addEventListener("mousemove", (e) => {
+        e.preventDefault();
+        if (!mouseDown) {
+            return;
+        }
         const x = e.pageX - slider.offsetLeft;
         const scroll = x - startX;
         slider.scrollLeft = scrollLeft - scroll;
     });
 
-    slider.addEventListener('mousedown', startDragging, false);
-    slider.addEventListener('mouseup', stopDragging, false);
-    slider.addEventListener('mouseleave', stopDragging, false);
+    slider.addEventListener("mousedown", startDragging, false);
+    slider.addEventListener("mouseup", stopDragging, false);
+    slider.addEventListener("mouseleave", stopDragging, false);
+}
+
+function gooeyCursor() {
+    var body = document.querySelector("body");
+    let bodyCursor = document.createElement("div");
+    bodyCursor.classList.add("gooey-cursor");
+    body.append(bodyCursor);
+
+    const TAIL_LENGTH = 15;
+
+    const cursor = document.querySelector(".custom-cursor");
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    let cursorCircles;
+    let cursorHistory = Array(TAIL_LENGTH).fill({ x: 0, y: 0 });
+
+    function onMouseMove(event) {
+        console.log(event.clientX);
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+    }
+
+    function initCursor() {
+        for (let i = 0; i < TAIL_LENGTH; i++) {
+            let div = document.createElement("div");
+            div.classList.add("cursor-circle");
+            cursor.append(div);
+        }
+        cursorCircles = Array.from(document.querySelectorAll(".cursor-circle"));
+    }
+
+    function updateCursor() {
+        cursorHistory.shift();
+        cursorHistory.push({ x: mouseX, y: mouseY });
+
+        for (let i = 0; i < TAIL_LENGTH; i++) {
+            let current = cursorHistory[i];
+            let next = cursorHistory[i + 1] || cursorHistory[TAIL_LENGTH - 1];
+
+            let xDiff = next.x - current.x;
+            let yDiff = next.y - current.y;
+
+            current.x += xDiff * 0.35;
+            current.y += yDiff * 0.35;
+            cursorCircles[i].style.transform = `translate(${current.x}px, ${
+                current.y
+            }px) scale(${i / TAIL_LENGTH})`;
+        }
+        requestAnimationFrame(updateCursor);
+    }
+
+    document.addEventListener("mousemove", onMouseMove, false);
+
+    initCursor();
+    updateCursor();
 }
