@@ -866,7 +866,9 @@ a.footer__content__item {
     }
 }
 
-/* gooey cursor */
+/* gooey cursor
+set the cursor-size to around 20px 
+*/
 .gooey-cursor {
     position: fixed;
     top: calc(var(--cursor-size) * 0.5);
