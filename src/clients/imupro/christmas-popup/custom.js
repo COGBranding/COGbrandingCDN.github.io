@@ -1,9 +1,9 @@
 if(($('.page-id-16').length || $('.page-id-7312').length || $('.page-id-67').length || $('.page-id-18'))) {
     //create christmas popup
-    var christmasModal='<div id="myModal" class="modal"><div class="modal-content"><span class="close">×</span><a href="/our- products"><img src="https://imupro.com.au/wp-content/uploads/2022/12/1.png"></a></div></div>'
+    var christmasModal='<div id="myModal" class="modal"><div class="modal-content"><span class="close">×</span><a href="/our-products"><img src="https://imupro.com.au/wp-content/uploads/2022/12/1.png"></a></div></div>'
     
   	//create new year popup
-    var newyearModal='<div id="myModal" class="modal"><div class="modal-content"><span class="close">×</span><a href="/our- products"><img src="https://imupro.com.au/wp-content/uploads/2022/12/2.png"></a></div></div>';
+    var newyearModal='<div id="myModal" class="modal"><div class="modal-content"><span class="close">×</span><a href="/our-products"><img src="https://imupro.com.au/wp-content/uploads/2022/12/2.png"></a></div></div>';
     
   	//create styles 
     var styles='<style>div#myModal{overflow: hidden; z-index: 9999999999; height: 100vh; width: 100vw;}span.close{color: #DA1414; font-size: 32px; font-weight: 900; position: relative; top: 10px; padding: 0px 20px; z-index: 9999;}.modal .modal-content img{height: 60vh; width: 100%; object-fit: cover; border-radius: 20px; margin: -30px 0;}#myModal .modal-content{padding: 0px; border: unset; background-color: #ffffff; width: fit-content; height: auto; border-radius: 20px !important;}@media(max-width: 767px){.popup-content{flex-direction: column; gap: unset;}.modal-content{width: 80% !important; position: relative;}.modal .modal-content img{max-width: 100%; border-radius: 20px; height: fit-content; width: 100vw;}.popup-content__div{padding: 0 20px; text-align: center;}}</style>';
