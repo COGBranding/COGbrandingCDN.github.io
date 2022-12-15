@@ -557,57 +557,62 @@ function scrollFixFirefoxdgrid() {
 }
 
 function gooeyCursor() {
-    var body = document.querySelector("body");
-    let bodyCursor = document.createElement("div");
-    bodyCursor.classList.add("gooey-cursor");
-    body.append(bodyCursor);
+    if (window.innerWidth >= 981) {
+        var body = document.querySelector("body");
+        let bodyCursor = document.createElement("div");
+        bodyCursor.classList.add("gooey-cursor");
+        body.append(bodyCursor);
 
-    const TAIL_LENGTH = 15;
+        const TAIL_LENGTH = 15;
 
-    const cursor = document.querySelector(".gooey-cursor");
+        const cursor = document.querySelector(".gooey-cursor");
 
-    let mouseX = 0;
-    let mouseY = 0;
+        let mouseX = 0;
+        let mouseY = 0;
 
-    let cursorCircles;
-    let cursorHistory = Array(TAIL_LENGTH).fill({ x: 0, y: 0 });
+        let cursorCircles;
+        let cursorHistory = Array(TAIL_LENGTH).fill({ x: 0, y: 0 });
 
-    function onMouseMove(event) {
-        mouseX = event.clientX;
-        mouseY = event.clientY;
-    }
-
-    function initCursor() {
-        for (let i = 0; i < TAIL_LENGTH; i++) {
-            let div = document.createElement("div");
-            div.classList.add("cursor-circle");
-            cursor.append(div);
+        function onMouseMove(event) {
+            mouseX = event.clientX;
+            mouseY = event.clientY;
         }
-        cursorCircles = Array.from(document.querySelectorAll(".cursor-circle"));
-    }
 
-    function updateCursor() {
-        cursorHistory.shift();
-        cursorHistory.push({ x: mouseX, y: mouseY });
-
-        for (let i = 0; i < TAIL_LENGTH; i++) {
-            let current = cursorHistory[i];
-            let next = cursorHistory[i + 1] || cursorHistory[TAIL_LENGTH - 1];
-
-            let xDiff = next.x - current.x;
-            let yDiff = next.y - current.y;
-
-            current.x += xDiff * 0.35;
-            current.y += yDiff * 0.35;
-            cursorCircles[i].style.transform = `translate(${current.x}px, ${
-                current.y
-            }px) scale(${i / TAIL_LENGTH})`;
+        function initCursor() {
+            for (let i = 0; i < TAIL_LENGTH; i++) {
+                let div = document.createElement("div");
+                div.classList.add("cursor-circle");
+                cursor.append(div);
+            }
+            cursorCircles = Array.from(
+                document.querySelectorAll(".cursor-circle")
+            );
         }
-        requestAnimationFrame(updateCursor);
+
+        function updateCursor() {
+            cursorHistory.shift();
+            cursorHistory.push({ x: mouseX, y: mouseY });
+
+            for (let i = 0; i < TAIL_LENGTH; i++) {
+                let current = cursorHistory[i];
+                let next =
+                    cursorHistory[i + 1] || cursorHistory[TAIL_LENGTH - 1];
+
+                let xDiff = next.x - current.x;
+                let yDiff = next.y - current.y;
+
+                current.x += xDiff * 0.35;
+                current.y += yDiff * 0.35;
+                cursorCircles[i].style.transform = `translate(${current.x}px, ${
+                    current.y
+                }px) scale(${i / TAIL_LENGTH})`;
+            }
+            requestAnimationFrame(updateCursor);
+        }
+
+        document.addEventListener("mousemove", onMouseMove, false);
+
+        initCursor();
+        updateCursor();
     }
-
-    document.addEventListener("mousemove", onMouseMove, false);
-
-    initCursor();
-    updateCursor();
 }
