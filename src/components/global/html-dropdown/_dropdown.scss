@@ -1,0 +1,70 @@
+.dropdown {
+    width: 300px;
+    cursor: pointer;
+
+    &__field {
+        background-color: var(--color-white);
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        box-shadow: var(--shadow-sm);
+        padding: 16px;
+        font-family: var(--font-inter);
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--color-navy);
+        transition: all 0.1s ease-in-out;
+
+        &:hover,
+        &:active {
+            box-shadow: var(--shadow-lg);
+            transition: all 0.1s ease-in-out;
+        }
+
+        &::after {
+            content: url("https://www.cogdigital.com.au/wp-content/uploads/2022/11/chevron-down.svg");
+            float: right;
+            width: 12px;
+            position: relative;
+            top: -2px;
+        }
+    }
+
+    &__list {
+        display: none;
+        margin-left: 0;
+        margin-bottom: 0;
+        background-color: var(--color-white);
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        box-shadow: var(--shadow-lg);
+        position: absolute;
+        overflow: hidden;
+        z-index: 1;
+
+        &.closed {
+            display: none;
+        }
+
+        &.open {
+            display: block;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        &__item {
+            display: block;
+            padding: 16px;
+            width: calc(320px - 32px);
+            font-family: var(--font-inter);
+            font-size: 15px;
+            font-weight: 400;
+            color: var(--color-navy) !important;
+
+            &:hover {
+                background-image: linear-gradient(rgb(0 0 0 / 5%) 0 0);
+            }
+        }
+    }
+}
