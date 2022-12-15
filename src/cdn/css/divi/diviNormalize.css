@@ -887,7 +887,7 @@ set the cursor-size to around 20px
     width: var(--cursor-size);
     height: var(--cursor-size);
     border-radius: var(--cursor-size);
-    background: #000;
+    background: var(--cursor-bg);
     transform-origin: center center;
 }
 .goo {
