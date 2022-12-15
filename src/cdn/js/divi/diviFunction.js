@@ -564,7 +564,7 @@ function gooeyCursor() {
 
     const TAIL_LENGTH = 15;
 
-    const cursor = document.querySelector(".custom-cursor");
+    const cursor = document.querySelector(".gooey-cursor");
 
     let mouseX = 0;
     let mouseY = 0;
