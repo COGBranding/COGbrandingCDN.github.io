@@ -573,7 +573,6 @@ function gooeyCursor() {
     let cursorHistory = Array(TAIL_LENGTH).fill({ x: 0, y: 0 });
 
     function onMouseMove(event) {
-        console.log(event.clientX);
         mouseX = event.clientX;
         mouseY = event.clientY;
     }
