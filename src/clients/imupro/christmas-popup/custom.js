@@ -24,10 +24,6 @@ if(($('.page-id-16').length || $('.page-id-7312').length || $('.page-id-67').len
     var newyear_start=new Date('01/01/2023');
     var newyear_end=new Date('01/15/2023');
 
-    //if clicked on close button, close popup
-    jQuery('span.close').on('click', function () {
-            jQuery('#myModal').hide()
-        });
 
     //display popup after 10seconds on the page
     if (today > christmas_start && today < christmas_end) {
@@ -41,7 +37,13 @@ if(($('.page-id-16').length || $('.page-id-7312').length || $('.page-id-67').len
     //display popup after 20seconds on the page
     if (today > newyear_start && today < newyear_end) {
         jQuery('body').append(newyearModal);
+        
+            //if clicked on close button, close popup
+        jQuery('span.close').on('click', function () {
+                jQuery('#myModal').hide()
+            });
 
+        
         setTimeout(()=> {
                 jQuery('#myModal').show();
             }, 20000);
