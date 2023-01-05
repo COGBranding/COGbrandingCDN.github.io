@@ -1,4 +1,4 @@
-if(($('.page-id-16').length || $('.page-id-7312').length || $('.page-id-67').length || $('.page-id-18'))) {
+if(($('.page-id-16').length || $('.page-id-7312').length || $('.page-id-67').length || $('.page-id-18').length)) {
     //create christmas popup
     var christmasModal='<div id="myModal" class="modal"><div class="modal-content"><span class="close">×</span><a href="/our-products"><img src="https://imupro.com.au/wp-content/uploads/2022/12/1.png"></a></div></div>'
     
