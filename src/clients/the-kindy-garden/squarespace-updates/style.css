@@ -12,6 +12,10 @@ h1 {
     font-family: "Dominique", sans-serif;
 }
 
+.fluid-engine.fe-6315700060670446b2d3b28b {
+    height: 100vh;
+}
+
 /* footer icons  */
 .footer__information__item p {
     display: flex;
