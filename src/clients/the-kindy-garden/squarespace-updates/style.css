@@ -6,3 +6,14 @@
 h1 {
     font-family: "Dominique", sans-serif;
 }
+
+/* footer icons  */
+#block-341d028ea28b073f3390 p {
+    display: flex;
+}
+#block-341d028ea28b073f3390 p::before {
+    width: 32px;
+    height: 32px;
+    padding-right: 1rem;
+    content: url("https://cogbranding.github.io/COGbrandingCDN.github.io/src/clients/the-kindy-garden/squarespace-updates/assets/icon-location.svg");
+}
