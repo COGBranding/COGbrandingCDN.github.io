@@ -96,15 +96,6 @@ h1 {
     color: #000;
 }
 
-@media all and (min-width: 768px) {
-    .hero-section__content {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-}
-
 @media all and (max-width: 767px) {
     .hero-section {
         height: unset;
