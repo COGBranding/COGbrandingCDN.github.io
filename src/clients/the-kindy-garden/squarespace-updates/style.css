@@ -13,9 +13,6 @@ h1 {
 }
 
 /* footer icons  */
-.footer__information__item {
-    padding-bottom: 1rem;
-}
 .footer__information__item p {
     display: flex;
     align-items: center;
@@ -56,7 +53,7 @@ h1 {
     height: 100vh;
 }
 .hero-section__content {
-    padding: 80px;
+    padding: 0 80px;
 }
 .hero-section__content p {
     font-family: "Inter", sans-serif;
@@ -94,6 +91,15 @@ h1 {
 .btn--white {
     background-color: #fff;
     color: #000;
+}
+
+@media all and (min-width: 768px) {
+    .hero-section__content {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 @media all and (max-width: 767px) {
