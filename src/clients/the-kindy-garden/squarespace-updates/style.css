@@ -1,3 +1,8 @@
+:root {
+    --color-green: #209a8c;
+    --color-orange: #faaa63;
+}
+
 @font-face {
     font-family: "Dominique";
     src: url("https://static1.squarespace.com/static/63152f42cd20fc07b5d4f84a/t/63194ad8a91f582b89c0f2e0/1662601946988/Dominique.otf");
@@ -35,4 +40,105 @@ h1 {
 
 .footer__information__item.phone p::before {
     content: url("https://cogbranding.github.io/COGbrandingCDN.github.io/src/clients/the-kindy-garden/squarespace-updates/assets/icon-phone.svg");
+}
+
+.hero-section {
+    background-color: var(--color-orange);
+    height: 100vh;
+}
+.hero-section__row {
+    display: flex;
+    justify-content: space-between;
+}
+.hero-section__content,
+.hero-section__image {
+    width: 50%;
+    height: 100vh;
+}
+.hero-section__content {
+    padding: 80px;
+}
+.hero-section__content p {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-bottom: 16px;
+}
+.hero-section__content h1 {
+    font-family: "Dominique", sans-serif;
+    font-size: 72px;
+    padding-bottom: 32px;
+}
+.hero-section__image img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.btn {
+    border: none;
+    padding: 16px 32px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.btn:hover {
+    background-image: linear-gradient(rgb(0 0 0 /5%) 0 0);
+}
+.btn--white {
+    background-color: #fff;
+    color: #000;
+}
+
+@media all and (min-width: 768px) {
+    .hero-section__content {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .hero-section {
+        height: unset;
+    }
+    .hero-section__row {
+        flex-direction: column-reverse;
+    }
+    .hero-section__content,
+    .hero-section__image {
+        width: 100%;
+        height: unset;
+    }
+    .hero-section__content {
+        padding: 40px 20px;
+    }
+    .hero-section__content {
+        text-align: center;
+    }
+    .hero-section__content p {
+        font-size: 14px;
+    }
+    .hero-section__content h1 {
+        font-size: 48px;
+    }
+    .hero-section__image img {
+        height: 55vh;
+    }
+    .btn {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 479px) {
+    .hero-section__image img {
+        height: 45vh;
+    }
 }
