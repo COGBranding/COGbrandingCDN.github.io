@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "Dominique";
+    src: url("https://static1.squarespace.com/static/63152f42cd20fc07b5d4f84a/t/63194ad8a91f582b89c0f2e0/1662601946988/Dominique.otf");
+}
+
+h1 {
+    font-family: "Dominique";
+}
