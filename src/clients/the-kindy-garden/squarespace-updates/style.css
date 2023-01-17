@@ -8,12 +8,27 @@ h1 {
 }
 
 /* footer icons  */
-#block-341d028ea28b073f3390 p {
+#block-341d028ea28b073f3390 p,
+#block-baf32afa937cc81c5e80 p,
+#block-yui_3_17_2_1_1673927216255_5450 p {
     display: flex;
 }
-#block-341d028ea28b073f3390 p::before {
+#block-341d028ea28b073f3390 p::before,
+#block-baf32afa937cc81c5e80 p::before,
+#block-yui_3_17_2_1_1673927216255_5450 p::before {
     width: 32px;
     height: 32px;
     padding-right: 1rem;
+}
+
+#block-341d028ea28b073f3390 p::before {
     content: url("https://cogbranding.github.io/COGbrandingCDN.github.io/src/clients/the-kindy-garden/squarespace-updates/assets/icon-location.svg");
+}
+
+#block-baf32afa937cc81c5e80 p::before {
+    content: url("https://cogbranding.github.io/COGbrandingCDN.github.io/src/clients/the-kindy-garden/squarespace-updates/assets/icon-email.svg");
+}
+
+#block-yui_3_17_2_1_1673927216255_5450 p::before {
+    content: url("https://cogbranding.github.io/COGbrandingCDN.github.io/src/clients/the-kindy-garden/squarespace-updates/assets/icon-phone.svg");
 }
