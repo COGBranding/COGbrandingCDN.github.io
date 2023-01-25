@@ -361,3 +361,7 @@ span[id^="tooltip"] {
     border: 1px solid var(--error-l2) !important;
     color: var(--error) !important;
 }
+
+.block-order-details-view .box .box-content {
+    height: 200px;
+}
