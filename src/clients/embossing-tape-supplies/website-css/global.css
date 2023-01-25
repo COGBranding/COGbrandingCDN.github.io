@@ -6,6 +6,9 @@
     --success-l1: #edf9f0;
     --success-l2: #5aca75;
     --success: #287d3c;
+    --error-l1: #feefef;
+    --error-l2: #f48989;
+    --error: #da1414;
 }
 
 @media all and (max-width: 767px) {
@@ -340,4 +343,21 @@ span[id^="tooltip"] {
     .minicart-items .product-item-name {
         width: 120px;
     }
+}
+
+.payment-method-billing-address button.action {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    padding: 12px 24px !important;
+}
+.payment-method-billing-address button.action-update {
+    background-color: var(--success-l1);
+    border: 1px solid var(--success-l2);
+    color: var(--success);
+}
+.payment-method-billing-address button.action-cancel {
+    background-color: var(--error-l1) !important;
+    border: 1px solid var(--error-l2) !important;
+    color: var(--error) !important;
 }
