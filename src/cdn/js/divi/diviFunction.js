@@ -647,3 +647,16 @@ function dropdownMenu() {
         });
     }
 }
+
+//function to close filter grid if clicked outside the filter grid
+function closeFilterGridDropdown(){
+    jQuery(document).ready(function () {
+        jQuery("#et-main-area").on("click", function () {
+            if (jQuery(".dp-dfg-filters-dropdown").hasClass("open")) {
+                jQuery(".dp-dfg-filters-dropdown").removeClass("open");
+                jQuery(".dp-dfg-filters-dropdown").addClass("closed");
+                jQuery('.dp-dfg-taxonomy-all').css('display', 'none');
+            }
+        });
+    });
+}
