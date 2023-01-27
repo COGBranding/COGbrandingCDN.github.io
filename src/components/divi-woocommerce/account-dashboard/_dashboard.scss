@@ -1,10 +1,10 @@
 .woocommerce-account {
     #main-content {
-        background-color: $color-light-grey !important;
+        background-color: $color-white !important;
         min-height: 100vh;
 
         .container {
-            @media all and (max-width: $breakpoint-tablet-sm-up) {
+            @media all and (max-width: $bp-tablet-sm-up) {
                 padding-top: 2rem !important;
             }
         }
@@ -15,7 +15,7 @@
         font-weight: 400;
         margin-bottom: 1rem;
 
-        @media all and (min-width: $breakpoint-desktop) {
+        @media all and (min-width: $bp-desktop) {
             padding-top: 1rem;
         }
     }
@@ -31,9 +31,9 @@
         background-color: $color-white;
         border-radius: 10px;
         overflow: hidden;
-        box-shadow: $shadow-md;
+        box-shadow: var(--shadow-md);
 
-        @media all and (max-width: $breakpoint-tablet-sm-up) {
+        @media all and (max-width: $bp-tablet-sm-up) {
             margin-bottom: 2rem;
         }
 
@@ -53,13 +53,14 @@
                     color: $color-black;
                     width: 100%;
 
-                    @media all and (max-width: $breakpoint-tablet-sm-up) {
+                    @media all and (max-width: $bp-tablet-sm-up) {
                         height: 50px;
                     }
 
-                    &:hover {
-                        background-image: linear-gradient(rgb(0 0 0 / 5%) 0 0);
-                    }
+                    // // Compile error
+                    // &:hover {
+                    //     background-image: linear-gradient(rgb(0 0 0 / 5%) 0 0);
+                    // }
                 }
             }
         }
@@ -68,9 +69,13 @@
             display: flex;
             align-items: center;
 
+            &:hover {
+                background-color: $color-lighter-grey;
+            }
+
             &.is-active {
                 a {
-                    background-color: $color-yellow;
+                    background-color: $color-lighter-grey;
                 }
             }
 
@@ -84,13 +89,13 @@
 
             &--dashboard {
                 &::before {
-                    content: url("/wp-content/uploads/2022/11/icon-dashboard.svg");
+                    content: url("https://cogbranding.github.io/COGbrandingCDN.github.io/src/components/divi-woocommerce/account-dashboard/assets/icon-dashboard.svg");
                 }
             }
 
             &--orders {
                 &::before {
-                    content: url("/wp-content/uploads/2022/11/icon-orders.svg");
+                    content: url("https://cogbranding.github.io/COGbrandingCDN.github.io/src/components/divi-woocommerce/account-dashboard/assets/icon-orders.svg");
                 }
             }
 
@@ -100,25 +105,25 @@
 
             &--edit-address {
                 &::before {
-                    content: url("/wp-content/uploads/2022/11/icon-address.svg");
+                    content: url("https://cogbranding.github.io/COGbrandingCDN.github.io/src/components/divi-woocommerce/account-dashboard/assets/icon-address.svg");
                 }
             }
 
             &--payment-methods {
                 &::before {
-                    content: url("/wp-content/uploads/2022/11/icon-payment-method.svg");
+                    content: url("https://cogbranding.github.io/COGbrandingCDN.github.io/src/components/divi-woocommerce/account-dashboard/assets/icon-payment-method.svg");
                 }
             }
 
             &--edit-account {
                 &::before {
-                    content: url("/wp-content/uploads/2022/11/icon-account-details.svg");
+                    content: url("https://cogbranding.github.io/COGbrandingCDN.github.io/src/components/divi-woocommerce/account-dashboard/assets/icon-account-details.svg");
                 }
             }
 
             &--customer-logout {
                 &::before {
-                    content: url("/wp-content/uploads/2022/11/icon-logout.svg");
+                    content: url("https://cogbranding.github.io/COGbrandingCDN.github.io/src/components/divi-woocommerce/account-dashboard/assets/icon-logout.svg");
                 }
             }
         }
@@ -128,7 +133,7 @@
         background-color: $color-white;
         border-radius: 10px;
         padding: 1.5rem;
-        box-shadow: $shadow-md;
+        box-shadow: var(--shadow-md);
 
         a {
             color: $color-black;
@@ -153,12 +158,12 @@
             border: 1px solid $color-border !important;
             border-radius: 5px !important;
             height: 40px !important;
-            box-shadow: $shadow-xs !important;
+            box-shadow: var(--shadow-xs) !important;
             transition: all 0.1s ease-in-out;
 
             &:hover,
             &:focus {
-                box-shadow: $shadow-lg !important;
+                box-shadow: var(--shadow-lg) !important;
                 transition: all 0.1s ease-in-out;
             }
 
@@ -186,11 +191,12 @@
             border-radius: 10px !important;
             padding: 6px 12px !important;
 
-            &:hover {
-                background-image: linear-gradient(
-                    rgb(0 0 0 / 5%) 0 0
-                ) !important;
-            }
+            // // Causes compile error
+            // &:hover {
+            //     background-image: linear-gradient(
+            //         rgb(0 0 0 / 5%) 0 0
+            //     ) !important;
+            // }
 
             &::after {
                 display: none !important;
@@ -241,11 +247,12 @@
                         font-size: 0.875rem !important;
                         border-radius: 10px !important;
 
-                        &:hover {
-                            background-image: linear-gradient(
-                                rgb(0 0 0 / 5%) 0 0
-                            );
-                        }
+                        // // Compile error
+                        // &:hover {
+                        //     background-image: linear-gradient(
+                        //         rgb(0 0 0 / 5%) 0 0
+                        //     );
+                        // }
 
                         &::after {
                             display: none;
