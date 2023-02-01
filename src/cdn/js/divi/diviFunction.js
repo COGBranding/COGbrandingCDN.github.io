@@ -5,7 +5,11 @@ function currentYear() {
     document.getElementById("year").innerHTML = new Date().getFullYear();
 }
 
+
 $(document).ready(function (e) {
+    //remove divi footer if duplicated under #main-content
+    $('#main-content .sec--footer').remove();
+
     // open all external links and pdfs on new tabs
     $("a").each(function () {
         var a = new RegExp("/" + window.location.host + "/");
