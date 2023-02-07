@@ -5,10 +5,9 @@ function currentYear() {
     document.getElementById("year").innerHTML = new Date().getFullYear();
 }
 
-
 $(document).ready(function (e) {
     //remove divi footer if duplicated under #main-content
-    $('#main-content .sec--footer').remove();
+    $("#main-content .sec--footer").remove();
 
     // open all external links and pdfs on new tabs
     $("a").each(function () {
@@ -653,14 +652,56 @@ function dropdownMenu() {
 }
 
 //function to close filter grid if clicked outside the filter grid
-function closeFilterGridDropdown(){
+function closeFilterGridDropdown() {
     jQuery(document).ready(function () {
         jQuery("#et-main-area").on("click", function () {
             if (jQuery(".dp-dfg-filters-dropdown").hasClass("open")) {
                 jQuery(".dp-dfg-filters-dropdown").removeClass("open");
                 jQuery(".dp-dfg-filters-dropdown").addClass("closed");
-                jQuery('.dp-dfg-taxonomy-all').css('display', 'none');
+                jQuery(".dp-dfg-taxonomy-all").css("display", "none");
             }
         });
+    });
+}
+
+// functions for parallax images
+function parallaxImg(
+    parallaxType,
+    parallaxContainerClass,
+    parallaxImgClass,
+    parallaxSpeed
+) {
+    var parallaxContainerClass = document.querySelectorAll(
+        parallaxContainerClass
+    );
+    var parallaxImgClass = document.querySelectorAll(parallaxImgClass);
+
+    window.addEventListener("scroll", function () {
+        for (let i = 0; i < parallaxContainerClass.length; i++) {
+            var containerTop =
+                parallaxContainerClass.getBoundingClientRect().top;
+            var containerBottom =
+                parallaxContainerClass.getBoundingClientRect().bottom;
+        }
+
+        if (containerBottom >= 0) {
+            for (let i = 0; i < parallaxImgClass.length; i++) {
+                var parallaxScroll = -containerTop / parallaxSpeed + "px";
+
+                switch (parallaxType) {
+                    case "parallaxImg":
+                        parallaxImgClass[i].style.top = parallaxScroll;
+                        break;
+
+                    case "parallaxBackground":
+                        parallaxImgClass[i].style.backgroundPositionY =
+                            parallaxScroll;
+                        break;
+
+                    default:
+                        console.log();
+                }
+            }
+        }
     });
 }
