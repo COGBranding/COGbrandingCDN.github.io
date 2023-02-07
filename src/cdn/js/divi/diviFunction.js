@@ -7,7 +7,6 @@ function currentYear() {
 
 $(document).ready(function (e) {
     //remove divi footer if duplicated under #main-content
-
     $("#main-content .footer").remove();
 
     // open all external links and pdfs on new tabs
@@ -680,9 +679,9 @@ function parallaxImg(
     window.addEventListener("scroll", function () {
         for (let i = 0; i < parallaxContainerClass.length; i++) {
             var containerTop =
-                parallaxContainerClass.getBoundingClientRect().top;
+                parallaxContainerClass[i].getBoundingClientRect().top;
             var containerBottom =
-                parallaxContainerClass.getBoundingClientRect().bottom;
+                parallaxContainerClass[i].getBoundingClientRect().bottom;
         }
 
         if (containerBottom >= 0) {
