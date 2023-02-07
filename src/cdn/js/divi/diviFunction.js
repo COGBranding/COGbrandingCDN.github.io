@@ -7,11 +7,8 @@ function currentYear() {
 
 $(document).ready(function (e) {
     //remove divi footer if duplicated under #main-content
-<<<<<<< HEAD
-    $("#main-content .sec--footer").remove();
-=======
-    $('#main-content .footer').remove();
->>>>>>> 647788078c0f440f71303aed5a92558653c07c3d
+
+    $("#main-content .footer").remove();
 
     // open all external links and pdfs on new tabs
     $("a").each(function () {
