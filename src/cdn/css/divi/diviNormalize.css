@@ -893,3 +893,16 @@ set the cursor-size to around 20px
 .goo {
     display: none;
 }
+
+/* Slick list - add grab cursor */
+.slick-list {
+    cusror: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+.slick-list:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
