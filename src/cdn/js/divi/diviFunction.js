@@ -679,11 +679,9 @@ function parallaxImg(
     window.addEventListener("scroll", function () {
         for (let i = 0; i < parallaxContainerClass.length; i++) {
             var containerTop =
-                parallaxContainerClass[i].getBoundingClientRect().top -
-                window.innerHeight;
+                parallaxContainerClass[i].getBoundingClientRect().top;
             var containerBottom =
-                parallaxContainerClass[i].getBoundingClientRect().bottom -
-                window.innerHeight;
+                parallaxContainerClass[i].getBoundingClientRect().bottom;
         }
 
         if (containerBottom >= 0) {
