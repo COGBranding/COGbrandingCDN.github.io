@@ -12,7 +12,7 @@ $(document).ready(function (e) {
 	// open all external links and pdfs on new tabs
 	$("a").each(function () {
 		var a = new RegExp("/" + window.location.host + "/");
-		if (!a.test(this.href) && this.href != "") {
+		if (!a.test(this.href) && this.href != "" && this.href != "javascript:void(0)") {
 			$(this).click(function (event) {
 				event.preventDefault();
 				event.stopPropagation();
