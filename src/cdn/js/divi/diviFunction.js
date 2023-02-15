@@ -659,7 +659,7 @@ function closeFilterGridDropdown() {
 					$(".dp-dfg-filters-dropdown").toggleClass("closed open");
 					$(".dp-dfg-level").slideUp();
 					// e.preventDefault();
-					e.stopPropagation();
+					// e.stopPropagation();
 				}
 			}
 		);
