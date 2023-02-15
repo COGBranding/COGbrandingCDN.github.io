@@ -658,7 +658,7 @@ function closeFilterGridDropdown() {
 				if (jQuery(".dp-dfg-filters-dropdown").hasClass("open")) {
 					$(".dp-dfg-filters-dropdown").toggleClass("closed open");
 					$(".dp-dfg-level").slideUp();
-					e.preventDefault();
+					// e.preventDefault();
 					e.stopPropagation();
 				}
 			}
