@@ -12,7 +12,11 @@ $(document).ready(function (e) {
     // open all external links and pdfs on new tabs
     $("a").each(function () {
         var a = new RegExp("/" + window.location.host + "/");
-        if (!a.test(this.href) && this.href != "") {
+        if (
+            !a.test(this.href) &&
+            this.href != "" &&
+            this.href != "javascript:void(0)"
+        ) {
             $(this).click(function (event) {
                 event.preventDefault();
                 event.stopPropagation();
@@ -654,13 +658,20 @@ function dropdownMenu() {
 //function to close filter grid if clicked outside the filter grid
 function closeFilterGridDropdown() {
     jQuery(document).ready(function () {
-        jQuery("#et-main-area").on("click", function () {
-            if (jQuery(".dp-dfg-filters-dropdown").hasClass("open")) {
-                jQuery(".dp-dfg-filters-dropdown").removeClass("open");
-                jQuery(".dp-dfg-filters-dropdown").addClass("closed");
-                jQuery(".dp-dfg-taxonomy-all").css("display", "none");
+        jQuery("#et-main-area, #et-main-area .dp-dfg-dropdown-label").on(
+            "click",
+            function (e) {
+                if (
+                    jQuery(".dp-dfg-filters-dropdown").hasClass("open") &&
+                    e.target.className !== "dp-dfg-dropdown-label"
+                ) {
+                    $(".dp-dfg-filters-dropdown")
+                        .toggleClass("closed open")
+                        .find(".dp-dfg-level")
+                        .slideUp();
+                }
             }
-        });
+        );
     });
 }
 
