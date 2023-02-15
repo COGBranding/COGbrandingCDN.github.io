@@ -688,16 +688,30 @@ function parallaxImg(
     var parallaxImgClass = document.querySelectorAll(parallaxImgClass);
 
     window.addEventListener("load", function () {
-        parallaxImgScroll();
+        parallaxImgScroll(
+            parallaxType,
+            parallaxContainerClass,
+            parallaxImgClass,
+            parallaxSpeed
+        );
     });
 
-    window.addEventListener("scroll"),
-        function () {
-            parallaxImgScroll();
-        };
+    window.addEventListener("scroll", function () {
+        parallaxImgScroll(
+            parallaxType,
+            parallaxContainerClass,
+            parallaxImgClass,
+            parallaxSpeed
+        );
+    });
 }
 
-function parallaxImgScroll() {
+function parallaxImgScroll(
+    parallaxType,
+    parallaxContainerClass,
+    parallaxImgClass,
+    parallaxSpeed
+) {
     for (let i = 0; i < parallaxContainerClass.length; i++) {
         var containerTop =
             parallaxContainerClass[i].getBoundingClientRect().top;
