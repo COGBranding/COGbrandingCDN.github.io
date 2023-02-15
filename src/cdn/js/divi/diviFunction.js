@@ -687,15 +687,13 @@ function parallaxImg(
     );
     var parallaxImgClass = document.querySelectorAll(parallaxImgClass);
 
-    // window.addEventListener("load", function () {
-        parallaxImgScroll(
-            parallaxType,
-            parallaxContainerClass,
-            parallaxImgClass,
-            parallaxSpeed
-        );
-    // });
-
+    parallaxImgScroll(
+        parallaxType,
+        parallaxContainerClass,
+        parallaxImgClass,
+        parallaxSpeed
+    );
+    
     window.addEventListener("scroll", function () {
         parallaxImgScroll(
             parallaxType,
