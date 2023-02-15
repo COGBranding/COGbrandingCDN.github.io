@@ -687,32 +687,41 @@ function parallaxImg(
     );
     var parallaxImgClass = document.querySelectorAll(parallaxImgClass);
 
-    window.addEventListener("load, scroll", function () {
-        for (let i = 0; i < parallaxContainerClass.length; i++) {
-            var containerTop =
-                parallaxContainerClass[i].getBoundingClientRect().top;
-            var containerBottom =
-                parallaxContainerClass[i].getBoundingClientRect().bottom;
-        }
+    window.addEventListener("load", function () {
+        parallaxImgScroll();
+    });
 
-        if (containerBottom >= 0) {
-            for (let i = 0; i < parallaxImgClass.length; i++) {
-                var parallaxScroll = -containerTop / parallaxSpeed + "px";
+    window.addEventListener("scroll"),
+        function () {
+            parallaxImgScroll();
+        };
+}
 
-                switch (parallaxType) {
-                    case "parallaxImg":
-                        parallaxImgClass[i].style.top = parallaxScroll;
-                        break;
+function parallaxImgScroll() {
+    for (let i = 0; i < parallaxContainerClass.length; i++) {
+        var containerTop =
+            parallaxContainerClass[i].getBoundingClientRect().top;
+        var containerBottom =
+            parallaxContainerClass[i].getBoundingClientRect().bottom;
+    }
 
-                    case "parallaxBackground":
-                        parallaxImgClass[i].style.backgroundPositionY =
-                            parallaxScroll;
-                        break;
+    if (containerBottom >= 0) {
+        for (let i = 0; i < parallaxImgClass.length; i++) {
+            var parallaxScroll = -containerTop / parallaxSpeed + "px";
 
-                    default:
-                        console.log();
-                }
+            switch (parallaxType) {
+                case "parallaxImg":
+                    parallaxImgClass[i].style.top = parallaxScroll;
+                    break;
+
+                case "parallaxBackground":
+                    parallaxImgClass[i].style.backgroundPositionY =
+                        parallaxScroll;
+                    break;
+
+                default:
+                    console.log();
             }
         }
-    });
+    }
 }
