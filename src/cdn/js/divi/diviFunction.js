@@ -676,34 +676,32 @@ function parallaxImg(
     );
     var parallaxImgClass = document.querySelectorAll(parallaxImgClass);
 
-    window.addEventListener("load", function () {
-        window.addEventListener("scroll", function () {
-            for (let i = 0; i < parallaxContainerClass.length; i++) {
-                var containerTop =
-                    parallaxContainerClass[i].getBoundingClientRect().top;
-                var containerBottom =
-                    parallaxContainerClass[i].getBoundingClientRect().bottom;
-            }
+    window.addEventListener("scroll", function () {
+        for (let i = 0; i < parallaxContainerClass.length; i++) {
+            var containerTop =
+                parallaxContainerClass[i].getBoundingClientRect().top;
+            var containerBottom =
+                parallaxContainerClass[i].getBoundingClientRect().bottom;
+        }
 
-            if (containerBottom >= 0) {
-                for (let i = 0; i < parallaxImgClass.length; i++) {
-                    var parallaxScroll = -containerTop / parallaxSpeed + "px";
+        if (containerBottom >= 0) {
+            for (let i = 0; i < parallaxImgClass.length; i++) {
+                var parallaxScroll = -containerTop / parallaxSpeed + "px";
 
-                    switch (parallaxType) {
-                        case "parallaxImg":
-                            parallaxImgClass[i].style.top = parallaxScroll;
-                            break;
+                switch (parallaxType) {
+                    case "parallaxImg":
+                        parallaxImgClass[i].style.top = parallaxScroll;
+                        break;
 
-                        case "parallaxBackground":
-                            parallaxImgClass[i].style.backgroundPositionY =
-                                parallaxScroll;
-                            break;
+                    case "parallaxBackground":
+                        parallaxImgClass[i].style.backgroundPositionY =
+                            parallaxScroll;
+                        break;
 
-                        default:
-                            console.log();
-                    }
+                    default:
+                        console.log();
                 }
             }
-        });
+        }
     });
 }
