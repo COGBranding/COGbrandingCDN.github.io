@@ -687,7 +687,7 @@ function parallaxImg(
     );
     var parallaxImgClass = document.querySelectorAll(parallaxImgClass);
 
-    window.addEventListener("scroll", function () {
+    window.addEventListener("load, scroll", function () {
         for (let i = 0; i < parallaxContainerClass.length; i++) {
             var containerTop =
                 parallaxContainerClass[i].getBoundingClientRect().top;
