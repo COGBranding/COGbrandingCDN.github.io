@@ -653,18 +653,14 @@ function dropdownMenu() {
 
 //function to close filter grid if clicked outside the filter grid
 function closeFilterGridDropdown() {
-	jQuery(document).ready(function () {
-		jQuery("#et-main-area, #et-main-area .dp-dfg-dropdown-label").on("click",function (e) {
-				if (jQuery(".dp-dfg-filters-dropdown").hasClass("open")) {
-					$(".dp-dfg-filters-dropdown").toggleClass("closed open");
-					$(".dp-dfg-level").slideUp();
-					// e.preventDefault();
-					e.stopPropagation();
-                    $(e.target).click();
-				}
-			}
-		);
-	});
+    jQuery(document).ready(function () {
+        jQuery("#et-main-area, #et-main-area .dp-dfg-dropdown-label").on("click", function (e) {
+            if (jQuery(".dp-dfg-filters-dropdown").hasClass("open") && (e.target.className !== 'dp-dfg-dropdown-label')) {
+                $(".dp-dfg-filters-dropdown").toggleClass("closed open").find(".dp-dfg-level").slideUp();
+            }
+        });
+    });
+
 }
 
 // functions for parallax images
