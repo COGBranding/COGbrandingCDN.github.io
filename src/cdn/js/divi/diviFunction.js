@@ -8,7 +8,10 @@ function currentYear() {
 $(document).ready(function (e) {
     //remove divi footer if duplicated under #main-content
     $("#main-content .footer").remove();
-
+    
+    //removes passpord protected blogs if filtergrid is being used
+    $(".dp-dfg-items .post-password-required").remove();
+    
     // open all external links and pdfs on new tabs
     $("a").each(function () {
         var a = new RegExp("/" + window.location.host + "/");
