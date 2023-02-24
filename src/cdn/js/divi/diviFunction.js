@@ -8,10 +8,10 @@ function currentYear() {
 $(document).ready(function (e) {
     //remove divi footer if duplicated under #main-content
     $("#main-content .footer").remove();
-    
+
     //removes passpord protected blogs if filtergrid is being used
     $(".dp-dfg-items .post-password-required").remove();
-    
+
     // open all external links and pdfs on new tabs
     $("a").each(function () {
         var a = new RegExp("/" + window.location.host + "/");
@@ -696,7 +696,7 @@ function parallaxImg(
         parallaxImgClass,
         parallaxSpeed
     );
-    
+
     window.addEventListener("scroll", function () {
         parallaxImgScroll(
             parallaxType,
@@ -738,5 +738,22 @@ function parallaxImgScroll(
                     console.log();
             }
         }
+    }
+}
+
+function createSpanText(selector) {
+    const element = document.querySelector(selector);
+
+    if (element) {
+        const words = element.innerText.split(" ");
+
+        element.innerHTML = words
+            .map(
+                (word, index) => `
+          <span class="outer">
+            <span class="inner">${word}</span>
+          </span>${index !== words.length - 1 ? " " : ""}`
+            )
+            .join("");
     }
 }
