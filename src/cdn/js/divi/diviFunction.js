@@ -757,3 +757,13 @@ function createSpanText(selector) {
             .join("");
     }
 }
+
+function hideEmptyParagraphs(selector) {
+    const paragraphs = document.querySelectorAll(selector);
+
+    paragraphs.forEach((paragraph) => {
+        if (!paragraph.textContent.trim()) {
+            paragraph.style.display = "none";
+        }
+    });
+}
