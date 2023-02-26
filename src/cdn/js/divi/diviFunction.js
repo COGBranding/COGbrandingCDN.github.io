@@ -781,8 +781,8 @@ function addCircleWithText(sectionClass, itemClass, text) {
 
         section.querySelectorAll(itemClass).forEach((item) => {
             item.addEventListener("mousemove", (event) => {
-                const x = event.clientX + window.scrollX;
-                const y = event.clientY + window.scrollY;
+                const x = event.clientX;
+                const y = event.clientY;
 
                 circle.style.left = `${x}px`;
                 circle.style.top = `${y}px`;
