@@ -767,3 +767,38 @@ function hideEmptyParagraphs(selector) {
         }
     });
 }
+
+// Add a reusable circle that follows the mouse when hovering on items inside a section
+function addCircleWithText(sectionClass, itemClass, text) {
+    const sections = document.querySelectorAll(sectionClass);
+
+    sections.forEach((section) => {
+        const circle = document.createElement("div");
+        circle.classList.add("dynamic-circle");
+
+        circle.textContent = text;
+        section.prepend(circle);
+
+        section.querySelectorAll(itemClass).forEach((item) => {
+            item.addEventListener("mousemove", (event) => {
+                const x = event.clientX;
+                const y = event.clientY;
+
+                circle.style.left = `${x}px`;
+                circle.style.top = `${y}px`;
+            });
+
+            item.addEventListener("mouseenter", () => {
+                circle.classList.add("dynamic-circle--active");
+            });
+
+            item.addEventListener("mouseleave", () => {
+                circle.classList.remove("dynamic-circle--active");
+            });
+
+            item.addEventListener("click", () => {
+                circle.classList.toggle("dynamic-circle--clicked");
+            });
+        });
+    });
+}
