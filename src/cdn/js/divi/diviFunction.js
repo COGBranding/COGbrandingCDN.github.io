@@ -741,20 +741,20 @@ function parallaxImgScroll(
 }
 
 function createSpanText(selector) {
-    const element = document.querySelector(selector);
+    const elements = document.querySelectorAll(selector);
 
-    if (element) {
+    elements.forEach((element) => {
         const words = element.innerText.split(" ");
 
         element.innerHTML = words
             .map(
-                (word, index) => `
-          <span class="outer">
+                (word, index) =>
+                    `<span class="outer">
             <span class="inner">${word}</span>
           </span>${index !== words.length - 1 ? " " : ""}`
             )
             .join("");
-    }
+    });
 }
 
 function hideEmptyParagraphs(selector) {
