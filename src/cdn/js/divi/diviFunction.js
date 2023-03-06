@@ -5,10 +5,12 @@ function currentYear() {
     document.getElementById("year").innerHTML = new Date().getFullYear();
 }
 
+
 $(document).ready(function (e) {
     //remove divi footer if duplicated under #main-content
     $("#main-content .footer").remove();
-
+    //hide divi footer in frontend builder mode
+    $('.et-fb footer').css('display', 'none');
     //removes passpord protected blogs if filtergrid is being used
     $(".dp-dfg-items .post-password-required").remove();
 
