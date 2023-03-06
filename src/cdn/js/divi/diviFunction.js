@@ -11,7 +11,7 @@ $(document).ready(function (e) {
     
     //removes passpord protected blogs if filtergrid is being used
     $(".dp-dfg-items .post-password-required").remove();
-    
+
     // open all external links and pdfs on new tabs
     $("a").each(function () {
         var a = new RegExp("/" + window.location.host + "/");
@@ -141,7 +141,6 @@ function mouseFollowArrow() {
     function cursorFinder(e) {
         var x = e.clientX;
         var y = e.clientY;
-        var coor = "Coordinates: (" + x + "," + y + ")";
 
         var theArrows = document.getElementsByClassName("arrow_icon");
         for (var i = 0; i < theArrows.length; i++) {
