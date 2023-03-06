@@ -8,7 +8,7 @@ function currentYear() {
 $(document).ready(function (e) {
     //remove divi footer if duplicated under #main-content
     $("#main-content .footer").remove();
-    
+
     //removes passpord protected blogs if filtergrid is being used
     $(".dp-dfg-items .post-password-required").remove();
 
@@ -695,7 +695,7 @@ function parallaxImg(
         parallaxImgClass,
         parallaxSpeed
     );
-    
+
     window.addEventListener("scroll", function () {
         parallaxImgScroll(
             parallaxType,
@@ -738,4 +738,66 @@ function parallaxImgScroll(
             }
         }
     }
+}
+
+function createSpanText(selector) {
+    const elements = document.querySelectorAll(selector);
+
+    elements.forEach((element) => {
+        const words = element.innerText.split(" ");
+
+        element.innerHTML = words
+            .map(
+                (word, index) =>
+                    `<span class="outer">
+            <span class="inner">${word}</span>
+          </span>${index !== words.length - 1 ? " " : ""}`
+            )
+            .join("");
+    });
+}
+
+function hideEmptyParagraphs(selector) {
+    const paragraphs = document.querySelectorAll(selector);
+
+    paragraphs.forEach((paragraph) => {
+        if (!paragraph.textContent.trim()) {
+            paragraph.style.display = "none";
+        }
+    });
+}
+
+// Add a reusable circle that follows the mouse when hovering on items inside a section
+function addCircleWithText(sectionClass, itemClass, text) {
+    const sections = document.querySelectorAll(sectionClass);
+
+    sections.forEach((section) => {
+        const circle = document.createElement("div");
+        circle.classList.add("dynamic-circle");
+
+        circle.textContent = text;
+        section.prepend(circle);
+
+        section.querySelectorAll(itemClass).forEach((item) => {
+            item.addEventListener("mousemove", (event) => {
+                const x = event.clientX;
+                const y = event.clientY;
+
+                circle.style.left = `${x}px`;
+                circle.style.top = `${y}px`;
+            });
+
+            item.addEventListener("mouseenter", () => {
+                circle.classList.add("dynamic-circle--active");
+            });
+
+            item.addEventListener("mouseleave", () => {
+                circle.classList.remove("dynamic-circle--active");
+            });
+
+            item.addEventListener("click", () => {
+                circle.classList.toggle("dynamic-circle--clicked");
+            });
+        });
+    });
 }
