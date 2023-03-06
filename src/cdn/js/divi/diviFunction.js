@@ -2,7 +2,7 @@ console.log("diviFunction loaded and working");
 
 // Current Year HTML
 function currentYear() {
-    if ($("#year").length()>=1) {
+    if ($("#year").length>=1) {
         document.getElementById("year").innerHTML = new Date().getFullYear();
     }
 }
