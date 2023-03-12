@@ -789,7 +789,7 @@ function addCircleWithText(sectionClass, itemClass, text) {
                 setTimeout(() => {
                     circle.style.left = `${x}px`;
                     circle.style.top = `${y}px`;
-                }, 50);
+                }, 200);
             });
 
             item.addEventListener("mouseenter", () => {
