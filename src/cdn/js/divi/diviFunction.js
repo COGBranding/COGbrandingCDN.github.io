@@ -2,17 +2,16 @@ console.log("diviFunction loaded and working");
 
 // Current Year HTML
 function currentYear() {
-    if ($("#year").length>=1) {
+    if ($("#year").length >= 1) {
         document.getElementById("year").innerHTML = new Date().getFullYear();
     }
 }
-
 
 $(document).ready(function (e) {
     //remove divi footer if duplicated under #main-content
     $("#main-content .footer").remove();
     //hide divi footer in frontend builder mode
-    $('.et-fb footer').css('display', 'none');
+    $(".et-fb footer").css("display", "none");
     //removes passpord protected blogs if filtergrid is being used
     $(".dp-dfg-items .post-password-required").remove();
 
@@ -787,8 +786,10 @@ function addCircleWithText(sectionClass, itemClass, text) {
                 const x = event.clientX;
                 const y = event.clientY;
 
-                circle.style.left = `${x}px`;
-                circle.style.top = `${y}px`;
+                setTimeout(() => {
+                    circle.style.left = `${x}px`;
+                    circle.style.top = `${y}px`;
+                }, 50);
             });
 
             item.addEventListener("mouseenter", () => {
