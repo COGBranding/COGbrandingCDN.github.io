@@ -786,10 +786,8 @@ function addCircleWithText(sectionClass, itemClass, text) {
                 const x = event.clientX;
                 const y = event.clientY;
 
-                setTimeout(() => {
-                    circle.style.left = `${x}px`;
-                    circle.style.top = `${y}px`;
-                }, 200);
+                circle.style.left = `${x}px`;
+                circle.style.top = `${y}px`;
             });
 
             item.addEventListener("mouseenter", () => {
