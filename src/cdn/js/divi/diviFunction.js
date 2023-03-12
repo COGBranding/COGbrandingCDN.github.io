@@ -786,43 +786,8 @@ function addCircleWithText(sectionClass, itemClass, text) {
                 const x = event.clientX;
                 const y = event.clientY;
 
-                const start = {
-                    x: parseFloat(circle.style.left),
-                    y: parseFloat(circle.style.top),
-                };
-                const end = { x, y };
-                const distance = Math.sqrt(
-                    (end.x - start.x) ** 2 + (end.y - start.y) ** 2
-                );
-
-                let progress = 0;
-                let prevTime = null;
-                const animate = (time) => {
-                    if (prevTime !== null) {
-                        progress += (time - prevTime) * 0.01; // adjust this value to control the speed of the easing
-                        const position = {
-                            x:
-                                start.x +
-                                ((end.x - start.x) * progress) / distance,
-                            y:
-                                start.y +
-                                ((end.y - start.y) * progress) / distance,
-                        };
-                        circle.style.left = `${position.x}px`;
-                        circle.style.top = `${position.y}px`;
-
-                        if (progress >= distance) {
-                            progress = distance;
-                        }
-                    }
-                    prevTime = time;
-
-                    if (progress < distance) {
-                        requestAnimationFrame(animate);
-                    }
-                };
-
-                requestAnimationFrame(animate);
+                circle.style.left = `${x}px`;
+                circle.style.top = `${y}px`;
             });
 
             item.addEventListener("mouseenter", () => {
