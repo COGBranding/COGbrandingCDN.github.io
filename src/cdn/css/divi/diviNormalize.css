@@ -967,3 +967,7 @@ set the cursor-size to around 20px
     transform: scale(0.75) !important;
     transition: transform 0.2s ease-in-out !important;
 }
+
+.cog__woo_toast {
+    position: fixed;
+}
