@@ -75,17 +75,16 @@
                 break;
             case "bottom-left":
                 this.addClass("bottom-left");
-
                 break;
             case "bottom-center":
                 this.addClass("bottom-center");
-
                 break;
             case "bottom-right":
                 this.addClass("bottom-right");
                 break;
             default:
                 this.addClass("top-center");
+                break;
         }
 
         if (timed) {
