@@ -81,7 +81,7 @@
 
         if (timed) {
             setTimeout(() => {
-                this.slideUp("slow");
+                this.parent().slideUp("slow");
             }, time);
         }
 
