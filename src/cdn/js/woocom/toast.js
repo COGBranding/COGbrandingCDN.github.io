@@ -19,6 +19,8 @@
         let position = settings.position;
         let closeIcon = settings.closeIcon;
 
+        console.log(settings.position);
+
         this.parent().addClass("added_to_cart_notice");
         this.addClass("cog-toast");
         this.css("background", settings.background);
