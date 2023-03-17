@@ -90,12 +90,4 @@
         });
         return this;
     };
-
-    $(".cog__woo_toast").raiseToast({
-        background: "#222222",
-        color: "#fff",
-        position: "bottom-center",
-        timed: false,
-        checkoutTheme: "invert",
-    });
 })(jQuery);
