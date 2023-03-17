@@ -2,14 +2,13 @@
     $.fn.raiseToast = function (options) {
         var settings = $.extend(
             {
-                color: "#000",
-                background: "#fff",
                 position: "top-center",
                 closeIcon: true,
                 checkout: true,
                 checkoutTheme: "invert",
                 timed: true,
                 timer: "5000",
+                theme: "dark",
             },
             options
         );
@@ -17,40 +16,23 @@
         let timed = settings.timed;
         let checkoutTheme = settings.checkoutTheme;
         let position = settings.position;
-        let closeIcon = settings.closeIcon;
+        let theme = settings.theme;
 
         this.parent().addClass("added_to_cart_notice");
-        this.addClass("cog-toast");
-        this.css("background", settings.background);
-        this.css("color", settings.color);
-        this.find("h2").css("color", settings.color);
         this.slideDown("slow");
 
-        if (closeIcon) {
-            this.find(".cog__woo_toast__close").css(
-                "color",
-                settings.background
-            );
-            this.find(".cog__woo_toast__close").css(
-                "background",
-                settings.color
-            );
-            this.find(".cog__woo_toast__close").css(
-                "border-color",
-                settings.background
-            );
+        if (theme == "dark") {
+            this.addClass("cog-toast-dark");
+        } else if (theme == "light") {
+            this.addClass("cog-toast-light");
         }
 
         switch (checkoutTheme) {
             case "invert":
                 this.find("a").addClass("inverted");
-                this.find("a").css("background", settings.color);
-                this.find("a").css("color", settings.background);
                 break;
             case "inherit":
                 this.find("a").addClass("inherited");
-                this.find("a").css("color", settings.color);
-                this.find("a").css("background", settings.background);
                 break;
         }
 
