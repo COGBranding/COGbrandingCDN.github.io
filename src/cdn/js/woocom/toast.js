@@ -19,12 +19,11 @@
         let position = settings.position;
         let closeIcon = settings.closeIcon;
 
-        console.log(settings.position);
-
         this.parent().addClass("added_to_cart_notice");
         this.addClass("cog-toast");
         this.css("background", settings.background);
         this.css("color", settings.color);
+        this.find("h2").css("color", settings.color);
         this.slideDown("slow");
 
         if (closeIcon) {
@@ -53,11 +52,6 @@
                 this.find("a").css("color", settings.color);
                 this.find("a").css("background", settings.background);
                 break;
-            default:
-                this.find("a").addClass("inverted");
-                this.find("a").css("background", settings.color);
-                this.find("a").css("color", settings.background);
-                break;
         }
 
         switch (position) {
@@ -81,9 +75,6 @@
                 break;
             case "bottom-right":
                 this.addClass("bottom-right");
-                break;
-            default:
-                this.addClass("top-center");
                 break;
         }
 
