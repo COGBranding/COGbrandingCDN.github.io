@@ -106,3 +106,34 @@
     width: 12px;
     margin-right: 12px;
 }
+.cog-toast-dark {
+    background: #222;
+    color: #fff;
+}
+.cog-toast-dark h2 {
+    color: #fff !important;
+}
+
+.cog-toast-light {
+    background: #fff;
+    color: #222;
+}
+.cog-toast-light h2 {
+    color: #222 !important;
+}
+.cog-toast-dark .inverted {
+    background: #fff;
+    color: #222;
+}
+.cog-toast-light .inverted {
+    background: #222;
+    color: #fff;
+}
+.cog-toast-dark .inherited {
+    background: #222;
+    color: #fff;
+}
+.cog-toast-light .inherited {
+    background: #fff;
+    color: #222;
+}

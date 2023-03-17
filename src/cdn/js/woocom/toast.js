@@ -39,15 +39,12 @@
         switch (position) {
             case "top-center":
                 this.addClass("top-center");
-
                 break;
             case "top-right":
                 this.addClass("top-right");
-
                 break;
             case "top-left":
                 this.addClass("top-left");
-
                 break;
             case "bottom-left":
                 this.addClass("bottom-left");
