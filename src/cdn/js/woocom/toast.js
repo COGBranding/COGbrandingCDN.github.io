@@ -7,24 +7,52 @@
                 position: "top-center",
                 closeIcon: true,
                 checkout: true,
+                checkoutTheme: "invert",
                 timed: true,
                 timer: "5000",
             },
             options
         );
+        let time = settings.timer;
+        let timed = settings.timed;
+        let checkoutTheme = settings.checkoutTheme;
+        let position = settings.position;
+        let closeIcon = settings.closeIcon;
 
         this.parent().addClass("added_to_cart_notice");
         this.addClass("cog-toast");
         this.css("background", settings.background);
         this.css("color", settings.color);
         this.slideDown("slow");
-        this.find("a").css("color", settings.background);
-        this.find("a").css("background", settings.color);
 
-        let time = settings.timer;
-        let timed = settings.timed;
+        if (closeIcon) {
+            this.find(".cog__woo_toast__close").css(
+                "color",
+                settings.background
+            );
+            this.find(".cog__woo_toast__close").css(
+                "background",
+                settings.color
+            );
+            this.find(".cog__woo_toast__close").css(
+                "border-color",
+                settings.background
+            );
+        }
 
-        let position = settings.position;
+        switch (checkoutTheme) {
+            case "invert":
+                this.find("a").addClass("inverted");
+                this.find("a").css("background", settings.color);
+                this.find("a").css("color", settings.background);
+                break;
+            case "inherit":
+                this.find("a").addClass("inherited");
+                this.find("a").css("color", settings.color);
+                this.find("a").css("background", settings.background);
+                break;
+        }
+
         switch (position) {
             case "top-center":
                 this.addClass("top-center");
@@ -56,13 +84,18 @@
                 this.slideUp("slow");
             }, time);
         }
+
+        this.find("#close-popup").click(() => {
+            this.slideUp("slow");
+        });
         return this;
     };
 
     $(".cog__woo_toast").raiseToast({
         background: "#222222",
         color: "#fff",
-        position: "bottom-right",
+        position: "bottom-center",
         timed: false,
+        checkoutTheme: "invert",
     });
 })(jQuery);

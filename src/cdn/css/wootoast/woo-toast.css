@@ -20,7 +20,7 @@
 }
 .cog__woo_toast p,
 .cog__woo_toast h2,
-.cog__woo_toast span {
+.cog__woo_toast div {
     display: inline-block;
 }
 .cog__woo_toast {
@@ -63,7 +63,7 @@
 .cog__woo_toast__checkout {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     padding: 5px 10px;
     gap: 10px;
     width: 84px;
@@ -72,18 +72,37 @@
     box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1),
         0px 1px 2px rgba(16, 24, 40, 0.06);
     border-radius: 8px;
+    text-decoration: none;
 }
 .cog__woo_toast__product_name {
     margin-right: 12px;
 }
 .cog__woo_toast__close {
     margin: 0px !important;
-    top: 0;
-    right: 8px;
+    top: -6px;
+    right: -6px;
     position: absolute;
+    color: #ff0000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
 }
+.cog__woo_toast__close span::before {
+    content: "X";
+    font-weight: 800;
+    font-size: 11px;
+}
+
+.cog__woo_toast__close span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .cog__woo_toast__green_tick::before {
     content: url("../../js/woocom/assets/Icon-wrapper.svg");
     height: 12px;
     width: 12px;
+    margin-right: 12px;
 }
