@@ -23,7 +23,7 @@
 .cog__woo_toast div {
     display: inline-block;
 }
-.added_to_cart_notice {
+.cog__woo_toast {
     z-index: 9999;
     max-width: 100%;
     padding: 12px;
@@ -32,31 +32,31 @@
     border-radius: 8px;
 }
 
-.added_to_cart_notice.top-center {
+.cog__woo_toast.top-center {
     top: 10%;
     left: calc(100vw - 60%);
 }
 
-.added_to_cart_notice.top-right {
+.cog__woo_toast.top-right {
     top: 10%;
     right: 10%;
 }
 
-.added_to_cart_notice.top-left {
+.cog__woo_toast.top-left {
     top: 10%;
     left: 10%;
 }
 
-.added_to_cart_notice.bottom-left {
+.cog__woo_toast.bottom-left {
     bottom: 10%;
     left: 10%;
 }
-.added_to_cart_notice.bottom-right {
+.cog__woo_toast.bottom-right {
     bottom: 10%;
     right: 10%;
 }
 
-.added_to_cart_notice.bottom-center {
+.cog__woo_toast.bottom-center {
     bottom: 10%;
     left: calc(100vw - 60%);
 }

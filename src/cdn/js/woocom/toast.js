@@ -21,9 +21,9 @@
 
         this.parent().addClass("added_to_cart_notice");
         this.addClass("cog-toast");
-        this.parent().css("background", settings.background);
-        this.parent().css("color", settings.color);
-        this.parent().slideDown("slow");
+        this.css("background", settings.background);
+        this.css("color", settings.color);
+        this.slideDown("slow");
 
         if (closeIcon) {
             this.find(".cog__woo_toast__close").css(
@@ -55,33 +55,33 @@
 
         switch (position) {
             case "top-center":
-                this.parent().addClass("top-center");
+                this.addClass("top-center");
 
                 break;
             case "top-right":
-                this.parent().addClass("top-right");
+                this.addClass("top-right");
 
                 break;
             case "top-left":
-                this.parent().addClass("top-left");
+                this.addClass("top-left");
 
                 break;
             case "bottom-left":
-                this.parent().addClass("bottom-left");
+                this.addClass("bottom-left");
 
                 break;
             case "bottom-center":
-                this.parent().addClass("bottom-center");
+                this.addClass("bottom-center");
 
                 break;
             case "bottom-right":
-                this.parent().addClass("bottom-right");
+                this.addClass("bottom-right");
                 break;
         }
 
         if (timed) {
             setTimeout(() => {
-                this.parent().slideUp("slow");
+                this.slideUp("slow");
             }, time);
         }
 
