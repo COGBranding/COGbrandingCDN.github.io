@@ -137,3 +137,11 @@
     background: #fff;
     color: #222;
 }
+.cog-toast-dark .cog__woo_toast__close {
+    background: #fff;
+    color: #222;
+}
+.cog-toast-light .cog__woo_toast__close {
+    background: #222;
+    color: #fff;
+}
