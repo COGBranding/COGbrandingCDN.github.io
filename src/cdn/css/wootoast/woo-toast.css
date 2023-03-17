@@ -33,17 +33,17 @@
 }
 
 .cog__woo_toast.top-center {
-    top: 10%;
+    top: 33%;
     left: calc(100vw - 60%);
 }
 
 .cog__woo_toast.top-right {
-    top: 10%;
+    top: 33%;
     right: 10%;
 }
 
 .cog__woo_toast.top-left {
-    top: 10%;
+    top: 33%;
     left: 10%;
 }
 

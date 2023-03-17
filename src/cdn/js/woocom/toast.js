@@ -51,6 +51,11 @@
                 this.find("a").css("color", settings.color);
                 this.find("a").css("background", settings.background);
                 break;
+            default:
+                this.find("a").addClass("inverted");
+                this.find("a").css("background", settings.color);
+                this.find("a").css("color", settings.background);
+                break;
         }
 
         switch (position) {
@@ -77,6 +82,8 @@
             case "bottom-right":
                 this.addClass("bottom-right");
                 break;
+            default:
+                this.addClass("top-center");
         }
 
         if (timed) {
