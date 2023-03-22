@@ -805,21 +805,21 @@ function addCircleWithText(sectionClass, itemClass, text) {
     });
 }
 
-const createInViewClass = (componentClass, selector, classToAdd) => {
+const createInViewClass = (sectionClass, selector, className) => {
     const observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
             if (entry.isIntersecting) {
                 var items = entry.target.querySelectorAll(selector);
 
                 items.forEach(function (item) {
-                    item.classList.add(classToAdd);
+                    item.classList.add(className);
                 });
             }
         });
     });
 
-    var components = document.querySelectorAll(componentClass);
-    components.forEach(function (component) {
-        observer.observe.component;
+    var sections = document.querySelectorAll(sectionClass);
+    sections.forEach(function (section) {
+        observer.observe(section);
     });
 };
