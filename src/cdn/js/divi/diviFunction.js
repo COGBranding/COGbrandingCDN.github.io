@@ -804,3 +804,22 @@ function addCircleWithText(sectionClass, itemClass, text) {
         });
     });
 }
+
+const createInViewClass = (componentClass, selector, classToAdd) => {
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                var items = entry.target.querySelectorAll(selector);
+
+                items.forEach(function (item) {
+                    item.classList.add(classToAdd);
+                });
+            }
+        });
+    });
+
+    var components = document.querySelectorAll(componentClass);
+    components.forEach(function (component) {
+        observer.observe.component;
+    });
+};
