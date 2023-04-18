@@ -764,7 +764,8 @@ function hideEmptyParagraphs(selector) {
     const paragraphs = document.querySelectorAll(selector);
 
     paragraphs.forEach((paragraph) => {
-        if (!paragraph.textContent.trim()) {
+        const imgElement = paragraph.querySelector("img");
+        if (!paragraph.textContent.trim() && !imgElement) {
             paragraph.style.display = "none";
         }
     });
