@@ -768,6 +768,10 @@ function hideEmptyParagraphs(selector) {
         if (!paragraph.textContent.trim() && !imgElement) {
             paragraph.style.display = "none";
         }
+
+        if (imgElement) {
+            paragraph.style.display = "block";
+        }
     });
 }
 
