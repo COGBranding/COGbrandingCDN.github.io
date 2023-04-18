@@ -967,7 +967,3 @@ set the cursor-size to around 20px
     transform: scale(0.75) !important;
     transition: transform 0.2s ease-in-out !important;
 }
-
-.empty-selected-content:has(img) {
-    display: block !important;
-}
