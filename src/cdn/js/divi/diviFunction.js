@@ -800,8 +800,11 @@ function addCircleWithText(sectionClass, itemClass, text) {
                 circle.classList.remove("dynamic-circle--clicked");
             });
 
-            item.addEventListener("click", () => {
-                circle.classList.toggle("dynamic-circle--clicked");
+            item.addEventListener("mousedown", () => {
+                circle.classList.add("dynamic-circle--clicked");
+            });
+            item.addEventListener("mouseup", () => {
+                circle.classList.remove("dynamic-circle--clicked");
             });
         });
     });
