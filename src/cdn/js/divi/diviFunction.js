@@ -797,7 +797,7 @@ function addCircleWithText(sectionClass, itemClass, text) {
 
             item.addEventListener("mouseleave", () => {
                 circle.classList.remove("dynamic-circle--active");
-                circle.classList.toggle("dynamic-circle--clicked");
+                circle.classList.remove("dynamic-circle--clicked");
             });
 
             item.addEventListener("click", () => {
