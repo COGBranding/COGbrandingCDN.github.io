@@ -97,3 +97,6 @@ sup.floating_number{
 
 For reference on overriding templates on the divi-child theme, see the following link:
 [https://help.elegantthemes.com/en/articles/3192155-moving-filterable-portfolio-module-to-child-theme](https://help.elegantthemes.com/en/articles/3192155-moving-filterable-portfolio-module-to-child-theme)
+
+
+<!-- test git deploy -->
