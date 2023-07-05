@@ -21,7 +21,9 @@ $(document).ready(function (e) {
         if (
             !a.test(this.href) &&
             this.href != "" &&
-            this.href != "javascript:void(0)"
+            this.href != "javascript:void(0)" &&
+	    !this.href.includes("mailto:") &&
+	    !this.href.includes("tel:")
         ) {
             $(this).click(function (event) {
                 event.preventDefault();
