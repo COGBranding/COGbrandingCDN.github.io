@@ -16,7 +16,7 @@ The function can be used to remove any classes (runs wildcard checking for class
 $("selector").removeClassStartingWith('et_');
 ```
 
-### 2. Add three dots to Divi breadcrumbs that are not the home or current page
+### 2. Add three dots to Divi breadcrumbs that are not the home or current page  
 
 ```
 const childBreadcrumb = document.querySelector(
