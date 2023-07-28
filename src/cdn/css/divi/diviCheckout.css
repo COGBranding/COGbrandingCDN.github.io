@@ -1,0 +1,264 @@
+.woocommerce-cart #main-content .container,
+.woocommerce-checkout #main-content .container,
+.woocommerce-account #main-content .container {
+    padding-top: 30px !important;
+    padding-bottom: 0 !important;
+}
+
+.woocommerce-cart .main_title h1,
+.woocommerce-checkout h1,
+.woocommerce-account h1 {
+    font-size: 3rem !important;
+    padding-bottom: 0 !important;
+}
+
+.woocommerce-cart table.cart img,
+.woocommerce-checkout table.cart img {
+    width: 64px !important;
+}
+
+.woocommerce-cart table.cart td,
+.woocommerce-cart table.cart th,
+.woocommerce-checkout table.shop_table td,
+.woocommerce-checkout table.shop_table th {
+    font-size: 1rem !important;
+    font-weight: unset !important;
+}
+
+.woocommerce-cart .coupon .input-text {
+    height: 50px !important;
+}
+
+.woocommerce-cart input.qty {
+    padding: 8px !important;
+}
+
+.woocommerce-cart button.button,
+.woocommerce-checkout button.button,
+a.checkout-button,
+a.button.wc-backward {
+    font-size: 1rem !important;
+    background-color: var(--success-l1) !important;
+    border: 1px solid var(--success-l2) !important;
+    color: var(--success) !important;
+    padding: 0 24px !important;
+    height: 50px;
+    border-radius: 0 !important;
+}
+
+form.checkout_coupon button.button {
+    height: 40px !important;
+}
+
+@media (max-width: 479px) {
+    form.checkout_coupon button.button {
+        width: 100% !important;
+    }
+}
+
+a.checkout-button,
+a.button.wc-backward {
+    background-color: var(--success) !important;
+    border-color: var(--success) !important;
+    color: #fff !important;
+    padding: 12px 24px !important;
+    height: unset !important;
+}
+
+a.checkout-button:hover,
+a.button.wc-backward:hover {
+    padding: 12px 24px !important;
+    opacity: 0.75;
+}
+
+.woocommerce-cart button.button:hover,
+.woocommerce-checkout button.button:hover,
+a.checkout-button:hover,
+a.button.wc-backward:hover {
+    background-color: var(--success) !important;
+    border-color: var(--success) !important;
+    color: #fff !important;
+}
+
+.woocommerce-cart button.button:after,
+.woocommerce-checkout button.button:after,
+a.checkout-button:after,
+a.button.wc-backward:after {
+    display: none !important;
+}
+
+.woocommerce-cart .cart_totals h2 {
+    font-size: 2rem;
+}
+
+.woocommerce-cart .entry-content table:not(.variations) {
+    border: none;
+}
+
+.woocommerce-cart .woocommerce-message {
+    background: var(--success-l1) !important;
+    border: 1px solid var(--success-l2) !important;
+    color: var(--success) !important;
+    font-size: 1rem !important;
+}
+
+p.cart-empty.woocommerce-info {
+    background: var(--alert-l1) !important;
+    border: 1px solid var(--alert-l2) !important;
+    color: var(--alert) !important;
+    font-size: 1rem !important;
+}
+
+@media (min-width: 769px) {
+
+    th.product-remove,
+    th.product-thumbnail,
+    th.product-name,
+    th.product-price,
+    th.product-quantity,
+    th.product-subtotal {
+        display: none;
+    }
+}
+
+.woocommerce-checkout .woocommerce-info {
+    background: var(--alert-l1) !important;
+    border: 1px solid var(--alert-l2) !important;
+    color: var(--alert) !important;
+    font-size: 1rem !important;
+}
+
+.woocommerce-checkout .woocommerce-info a {
+    color: var(--alert) !important;
+}
+
+form.checkout_coupon p {
+    font-size: 1rem;
+}
+
+.woocommerce form .form-row-first,
+.woocommerce form .form-row-last,
+.woocommerce-page form .form-row-first,
+.woocommerce-page form .form-row-last {
+    width: 49%;
+}
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+    background-color: #fff !important;
+    border: 1px solid var(--black-20) !important;
+    font-size: 1rem !important;
+    height: 40px;
+    transition: all 0.2s ease-in-out;
+}
+
+.woocommerce form .form-row textarea {
+    font-size: 1rem !important;
+    height: 120px !important;
+}
+
+.woocommerce form .form-row input.input-text:focus,
+.woocommerce form .form-row textarea:focus {
+    border: 1px solid var(--black-100) !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.woocommerce-checkout h3 {
+    font-size: 1.5rem;
+}
+
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid var(--black-20);
+    border-radius: 0;
+    height: 40px;
+    transition: all 0.2s ease-in-out;
+}
+
+.select2-container--default .select2-selection--single:focus {
+    border: 1px solid var(--black-100);
+    transition: all 0.2s ease-in-out;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 40px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 40px;
+}
+
+h3#order_review_heading {
+    margin-top: 20px;
+}
+
+.woocommerce-checkout #payment {
+    border-radius: 10px;
+    background: #f5f5f5;
+}
+
+.woocommerce-checkout #payment div.payment-box::before {
+    display: none;
+}
+
+.woocommerce-checkout #payment div.payment-box {
+    background-color: rgb(225, 225, 230);
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.woocommerce-checkout #payment div.payment_box .wc-credit-card-form {
+    background: #fff !important;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.woocommerce-checkout form .form-row label {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.woocommerce-checkout #payment div.payment_box .form-row.form-row-wide {
+    margin: 0;
+    padding: 20px 20px 10px;
+}
+
+.wc-stripe-elements-field {
+    margin: 2px 0;
+    border-color: var(--black-20);
+    padding: 12px;
+    transition: all 0.2s ease-in-out;
+}
+
+.wc-stripe-elements-field:focus {
+    border-color: var(--black-100);
+    transition: all 0.2s ease-in-out;
+}
+
+.woocommerce-checkout #payment p {
+    font-size: 1rem;
+}
+
+.woocommerce-checkout #payment a {
+    color: unset;
+    text-decoration: underline !important;
+}
+
+.woocommerce-checkout #payment .place-order {
+    padding: 20px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .woocommerce-checkout #payment .place-order {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 980px) {
+    .woocommerce-additional-fields {
+        margin-top: 20px;
+    }
+}

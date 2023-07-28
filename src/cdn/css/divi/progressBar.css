@@ -1,0 +1,21 @@
+#reading-progress{
+    background: var(--progress-line-color);
+    left: 0;
+    height: var(--progress-line-height);
+    position: fixed;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+
+.mouse-follow-circle{
+    background:#000; /* var(--follow-mouse-color) */
+    width:10px; /* var(--follow-mouse-width) */
+    height:10px;  /* var(--follow-mouse-height) */
+    border-radius:50%; /* var(--follow-mouse-radius) */
+    position:absolute;
+    transform:translate3d(-20%,-20%,0);
+    transition:transform 2s cubic-bezier(.02,1.23,.79,1.08);
+    z-index: 999999;
+  }
+  
