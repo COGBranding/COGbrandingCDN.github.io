@@ -5,7 +5,7 @@ function currentYear() {
     if ($("#year").length >= 1) {
         document.getElementById("year").innerHTML = new Date().getFullYear();
     }
-}
+} 
 
 $(document).ready(function (e) {
     //remove divi footer if duplicated under #main-content
