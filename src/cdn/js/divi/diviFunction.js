@@ -2,21 +2,21 @@ console.log("diviFunction loaded and working");
 
 // Current Year HTML
 function currentYear() {
-    if ($("#year").length >= 1) {
+    if (jQuery("#year").length >= 1) {
         document.getElementById("year").innerHTML = new Date().getFullYear();
     }
 } 
 
-$(document).ready(function (e) {
+jQuery(document).ready(function (e) {
     //remove divi footer if duplicated under #main-content
-    $("#main-content .footer").remove();
+    jQuery("#main-content .footer").remove();
     //hide divi footer in frontend builder mode
-    $(".logged-in.admin-bar.et-fb footer").css("display", "none");
+    jQuery(".logged-in.admin-bar.et-fb footer").css("display", "none");
     //removes passpord protected blogs if filtergrid is being used
-    $(".dp-dfg-items .post-password-required").remove();
+    jQuery(".dp-dfg-items .post-password-required").remove();
 
     // open all external links and pdfs on new tabs
-    $("a").each(function () {
+    jQuery("a").each(function () {
         var a = new RegExp("/" + window.location.host + "/");
         if (
             !a.test(this.href) &&
@@ -25,26 +25,26 @@ $(document).ready(function (e) {
 	    !this.href.includes("mailto:") &&
 	    !this.href.includes("tel:")
         ) {
-            $(this).click(function (event) {
+            jQuery(this).click(function (event) {
                 event.preventDefault();
                 event.stopPropagation();
                 window.open(this.href, "_blank");
             });
         }
-        if ($(this).attr("href") == undefined || $(this).attr("href") == "") {
-            $(this).click(function (event) {
+        if (jQuery(this).attr("href") == undefined || jQuery(this).attr("href") == "") {
+            jQuery(this).click(function (event) {
                 event.preventDefault();
                 event.stopPropagation();
             });
         }
-        $('a[href$=".pdf"]').attr("target", "_blank");
+        jQuery('a[hrefjQuery=".pdf"]').attr("target", "_blank");
     });
 
     //Adds dark background overlay on divi mobile menu open
     var html = '<div id="cog-overlay"></div>';
-    $(html).insertBefore("#main-content");
-    $("#et_mobile_nav_menu .mobile_menu_bar_toggle").click(function () {
-        $("#cog-overlay").toggle();
+    jQuery(html).insertBefore("#main-content");
+    jQuery("#et_mobile_nav_menu .mobile_menu_bar_toggle").click(function () {
+        jQuery("#cog-overlay").toggle();
     });
 });
 
@@ -70,52 +70,52 @@ function stickyMobileHeader(mobile_breakpoint) {
 
 // Add dropdowns to mobile menu
 function mobileMenuDropdown() {
-    $(document).ready(function () {
-        $(
+    jQuery(document).ready(function () {
+        jQuery(
             "body ul.et_mobile_menu li.menu-item-has-children, body ul.et_mobile_menu  li.page_item_has_children"
         ).append('<a href="#" class="mobile-toggle"></a>');
-        $(
+        jQuery(
             "ul.et_mobile_menu li.menu-item-has-children .mobile-toggle, ul.et_mobile_menu li.page_item_has_children .mobile-toggle"
         ).click(function (event) {
             event.preventDefault();
-            $(this).parent("li").toggleClass("dt-open");
-            $(this)
+            jQuery(this).parent("li").toggleClass("dt-open");
+            jQuery(this)
                 .parent("li")
                 .find("ul.children")
                 .first()
                 .toggleClass("visible");
-            $(this)
+            jQuery(this)
                 .parent("li")
                 .find("ul.sub-menu")
                 .first()
                 .toggleClass("visible");
         });
         iconFINAL = "P";
-        $(
+        jQuery(
             "body ul.et_mobile_menu li.menu-item-has-children, body ul.et_mobile_menu li.page_item_has_children"
         ).attr("data-icon", iconFINAL);
-        $(".mobile-toggle")
+        jQuery(".mobile-toggle")
             .on("mouseover", function () {
-                $(this).parent().addClass("is-hover");
+                jQuery(this).parent().addClass("is-hover");
             })
             .on("mouseout", function () {
-                $(this).parent().removeClass("is-hover");
+                jQuery(this).parent().removeClass("is-hover");
             });
 
         //close the opened dropdown if another is opened
-        $(".menu-item-has-children").on("click", function (e) {
+        jQuery(".menu-item-has-children").on("click", function (e) {
             // checks and stores whether selected element is open or not
-            var ooc = $(this).hasClass("dt-open");
+            var ooc = jQuery(this).hasClass("dt-open");
             //closes all dropdowns
-            $(".menu-item-has-children").removeClass("dt-open");
-            $(".menu-item-has-children").find("ul").removeClass("visible");
+            jQuery(".menu-item-has-children").removeClass("dt-open");
+            jQuery(".menu-item-has-children").find("ul").removeClass("visible");
             //opens the current element if its closed. closes it if its open
             if (!ooc) {
-                $(this).removeClass("dt-open");
-                $(this).find("ul").removeClass("visible");
+                jQuery(this).removeClass("dt-open");
+                jQuery(this).find("ul").removeClass("visible");
             } else {
-                $(this).addClass("dt-open");
-                $(this).find("ul").addClass("visible");
+                jQuery(this).addClass("dt-open");
+                jQuery(this).find("ul").addClass("visible");
             }
         });
     });
@@ -188,30 +188,30 @@ function footerCollapse(site_width) {
 
         for (i = 0; i < acc.length; i++) {
             acc[i].addEventListener("click", function () {
-                if ($(".footer__accordion").hasClass("footer-active")) {
-                    $(".footer__accordion")
+                if (jQuery(".footer__accordion").hasClass("footer-active")) {
+                    jQuery(".footer__accordion")
                         .not(this)
                         .removeClass("footer-active");
-                    $(".footer__accordion")
+                    jQuery(".footer__accordion")
                         .not(this)
                         .parent()
                         .find("#footer__content")
                         .css("max-height", "0");
                 }
                 this.classList.toggle("footer-active");
-                content = $(this).parent().find("#footer__content");
+                content = jQuery(this).parent().find("#footer__content");
                 if (
-                    $(this)
+                    jQuery(this)
                         .parent()
                         .find("#footer__content")
                         .css("max-height") != "0px"
                 ) {
-                    $(this)
+                    jQuery(this)
                         .parent()
                         .find("#footer__content")
                         .css("max-height", "0px");
                 } else {
-                    $(this)
+                    jQuery(this)
                         .parent()
                         .find("#footer__content")
                         .css("max-height", content.prop("scrollHeight") + "px");
@@ -223,28 +223,28 @@ function footerCollapse(site_width) {
 
 /* Divi FAQ Accordion close option */
 function accordionClose() {
-    jQuery(function ($) {
-        $(".et_pb_toggle_title").click(function () {
-            var $toggle = $(this).closest(".et_pb_toggle");
-            if (!$toggle.hasClass("et_pb_accordion_toggling")) {
-                var $accordion = $toggle.closest(".et_pb_accordion");
-                if ($toggle.hasClass("et_pb_toggle_open")) {
-                    $accordion.addClass("et_pb_accordion_toggling");
-                    $toggle
+    jQuery(function (jQuery) {
+        jQuery(".et_pb_toggle_title").click(function () {
+            var jQuerytoggle = jQuery(this).closest(".et_pb_toggle");
+            if (!jQuerytoggle.hasClass("et_pb_accordion_toggling")) {
+                var jQueryaccordion = jQuerytoggle.closest(".et_pb_accordion");
+                if (jQuerytoggle.hasClass("et_pb_toggle_open")) {
+                    jQueryaccordion.addClass("et_pb_accordion_toggling");
+                    jQuerytoggle
                         .find(".et_pb_toggle_content")
                         .slideToggle(700, function () {
-                            $toggle
+                            jQuerytoggle
                                 .removeClass("et_pb_toggle_open")
                                 .addClass("et_pb_toggle_close");
                         });
                 }
                 setTimeout(function () {
-                    $accordion.removeClass("et_pb_accordion_toggling");
+                    jQueryaccordion.removeClass("et_pb_accordion_toggling");
                 }, 750);
             }
         });
 
-        $(
+        jQuery(
             ".et_pb_module.et_pb_accordion .et_pb_accordion_item.et_pb_toggle_open"
         )
             .addClass("et_pb_toggle_close")
@@ -253,9 +253,9 @@ function accordionClose() {
 }
 
 /* function to remove divi classes from seleted parameters */
-$(document).ready(function (e) {
-    $.fn.removeClassStartingWith = function (filter) {
-        $(this).removeClass(function (index, className) {
+jQuery(document).ready(function (e) {
+    jQuery.fn.removeClassStartingWith = function (filter) {
+        jQuery(this).removeClass(function (index, className) {
             return (
                 className.match(new RegExp("\\S*" + filter + "\\S*", "g")) || []
             ).join(" ");
@@ -271,17 +271,17 @@ function getMaxHeight(site_width, className) {
         var i = 1;
         var j = 0;
         var k = 0;
-        $(className).each(function (key, val) {
-            $(val).css("height", "unset");
+        jQuery(className).each(function (key, val) {
+            jQuery(val).css("height", "unset");
         });
-        $(className).each(function (key, val) {
-            $(val).each(function () {
+        jQuery(className).each(function (key, val) {
+            jQuery(val).each(function () {
                 maxHeight[k] = maxHeight[k] == undefined ? 0 : maxHeight[k];
                 if (
                     window.innerWidth > site_width &&
-                    $(this).height() >= maxHeight[k]
+                    jQuery(this).height() >= maxHeight[k]
                 ) {
-                    maxHeight[k] = $(this).height();
+                    maxHeight[k] = jQuery(this).height();
                 }
                 i++;
             });
@@ -289,8 +289,8 @@ function getMaxHeight(site_width, className) {
             k++;
         });
         if (window.innerWidth > site_width) {
-            $(className).each(function (key, val) {
-                $(val).height(maxHeight[j]);
+            jQuery(className).each(function (key, val) {
+                jQuery(val).height(maxHeight[j]);
                 j++;
             });
         }
@@ -310,25 +310,25 @@ jQuery(document).ready(function () {
 function focusHoverItem(site_width) {
     jQuery(document).ready(function () {
         if (window.innerWidth >= site_width) {
-            $("#top-menu .menu-item").hover(
+            jQuery("#top-menu .menu-item").hover(
                 function () {
-                    $("#top-menu .menu-item").not(this).addClass("inactive");
-                    $(this).parent().parent().removeClass("inactive");
-                    //                     $(this).parent(".sub-menu").find("li").removeClass("inactive");
+                    jQuery("#top-menu .menu-item").not(this).addClass("inactive");
+                    jQuery(this).parent().parent().removeClass("inactive");
+                    //                     jQuery(this).parent(".sub-menu").find("li").removeClass("inactive");
                 },
                 function () {
-                    $("#top-menu .menu-item").not(this).removeClass("inactive");
+                    jQuery("#top-menu .menu-item").not(this).removeClass("inactive");
                 }
             );
-            $(".account-icon, .cart-icon, .phone-icon").hover(function () {
-                $("#top-menu .menu-item").not(this).removeClass("inactive");
+            jQuery(".account-icon, .cart-icon, .phone-icon").hover(function () {
+                jQuery("#top-menu .menu-item").not(this).removeClass("inactive");
             });
-            $(".footer__content__item").hover(
+            jQuery(".footer__content__item").hover(
                 function () {
-                    $(".footer__content__item").not(this).addClass("inactive");
+                    jQuery(".footer__content__item").not(this).addClass("inactive");
                 },
                 function () {
-                    $(".footer__content__item")
+                    jQuery(".footer__content__item")
                         .not(this)
                         .removeClass("inactive");
                 }
@@ -339,23 +339,23 @@ function focusHoverItem(site_width) {
 
 // priority menu function
 function priorityMenu() {
-    (function ($) {
-        $("#top-menu").append(
+    (function (jQuery) {
+        jQuery("#top-menu").append(
             '<li id="more-menu" class="menu-item menu-item-has-children"><a href="#"><span class="more-menu-label"></span></a><ul class="sub-menu"></ul></li>'
         );
         // Priority+ navigation, whee!
         function priorityNav() {
             // Make sure we have a menu and that the more-more item is present
-            if (0 < $("#top-menu").length && 0 < $("#more-menu").length) {
+            if (0 < jQuery("#top-menu").length && 0 < jQuery("#more-menu").length) {
                 var navWidth = 0;
-                var firstMoreElement = $("#more-menu li").first();
+                var firstMoreElement = jQuery("#more-menu li").first();
 
                 // Calculate the width of our "more" containing element
-                var moreWidth = parseInt($("#more-menu").outerWidth());
+                var moreWidth = parseInt(jQuery("#more-menu").outerWidth());
 
                 // Calculate the current width of our navigation
-                $("#top-menu-nav #top-menu > li").each(function () {
-                    navWidth += $(this).outerWidth();
+                jQuery("#top-menu-nav #top-menu > li").each(function () {
+                    navWidth += jQuery(this).outerWidth();
                 });
 
                 if (moreWidth <= 10) {
@@ -364,17 +364,17 @@ function priorityMenu() {
 
                 // Calculate our available space
                 availableSpace =
-                    $(".logo_container").innerWidth() -
+                    jQuery(".logo_container").innerWidth() -
                     moreWidth * 2 -
-                    $(".logo_container img").outerWidth();
+                    jQuery(".logo_container img").outerWidth();
 
                 // If our nav is wider than our available space, we're going to move items
                 if (navWidth > availableSpace) {
-                    var lastItem = $(
+                    var lastItem = jQuery(
                         "#top-menu-nav #top-menu > li:not(#more-menu)"
                     ).last();
                     lastItem.attr("data-width", lastItem.outerWidth());
-                    lastItem.prependTo($("#more-menu .sub-menu").eq(0));
+                    lastItem.prependTo(jQuery("#more-menu .sub-menu").eq(0));
                     priorityNav(); // Rerun this function!
 
                     // But if we have the extra space, we should add the items back to our menu
@@ -384,28 +384,28 @@ function priorityMenu() {
                 ) {
                     // Check to be sure there's enough space for our extra element
                     firstMoreElement.insertBefore(
-                        $("#top-menu-nav #top-menu > li").last()
+                        jQuery("#top-menu-nav #top-menu > li").last()
                     );
                     priorityNav();
                 }
 
                 // Hide our more-menu entirely if there's nothing in it
-                if ($("#more-menu li").length > 0) {
-                    $("#more-menu").addClass("visible");
+                if (jQuery("#more-menu li").length > 0) {
+                    jQuery("#more-menu").addClass("visible");
                 } else {
-                    $("#more-menu").removeClass("visible");
+                    jQuery("#more-menu").removeClass("visible");
                 }
             } // check for body class
         } // function priorityNav
 
         // Run our functions once the window has loaded fully
-        $(window).on("load", function () {
+        jQuery(window).on("load", function () {
             priorityNav();
         });
 
         // Annnnnd also every time the window resizes
         var isResizing = false;
-        $(window).on("resize", function () {
+        jQuery(window).on("resize", function () {
             if (isResizing) {
                 return;
             }
@@ -431,43 +431,43 @@ function transparentHeader() {
 // if divi link module is used, the following function will use it to wrap the selector with a tag allowing preview.
 function divi_link_preview() {
     et_link_options_data.forEach(function (item) {
-        $("." + item["class"]).wrap(
+        jQuery("." + item["class"]).wrap(
             '<a href="' + item["url"] + '" target="' + item["target"] + '"></a>'
         );
     });
 }
 
 function blogHeadingLink() {
-    $(".single-post h2").wrap(function () {
-        var title = $(this).text();
+    jQuery(".single-post h2").wrap(function () {
+        var title = jQuery(this).text();
         title = title.replace(/[,.\- ]/g, "-").toLowerCase();
-        $(this).attr("id", title);
+        jQuery(this).attr("id", title);
         return "<a href='#" + title + "'></a>";
     });
 }
 
 // the following function sets the active status on the selected menu, useful for one-page menu sites (works with divi theme)
 function setActiveMenu() {
-    $("ul.et-menu .menu-item a").on("click", function () {
-        $(".menu-item").removeClass("active");
-        $(this).parent().addClass("active");
+    jQuery("ul.et-menu .menu-item a").on("click", function () {
+        jQuery(".menu-item").removeClass("active");
+        jQuery(this).parent().addClass("active");
     });
 }
 
 // the following is the extension of the above function. this sets the current on screen section as active on the menu
 function scrollActive(selector) {
-    if ($("#" + selector + " div").isInViewport()) {
-        $(".menu-item").removeClass("active");
-        $("." + selector + "-menu").addClass("active");
+    if (jQuery("#" + selector + " div").isInViewport()) {
+        jQuery(".menu-item").removeClass("active");
+        jQuery("." + selector + "-menu").addClass("active");
     }
 }
 
 /*
 The following is an example of how the above scrollActive function should be called. 
 the below is for reference only which shows the method which will sow active status on the correct section based on the direction of scroll
-    var position = $(window).scrollTop(); 
-	$(window).scroll(function() {
-        var scroll = $(window).scrollTop();
+    var position = jQuery(window).scrollTop(); 
+	jQuery(window).scroll(function() {
+        var scroll = jQuery(window).scrollTop();
         if(scroll < position) {
             scrollActive('who-is-soilco');
             scrollActive('what-is-fogo');
@@ -492,19 +492,19 @@ the below is for reference only which shows the method which will sow active sta
 */
 
 // the following section checks if the selector is in the current viewport
-$.fn.isInViewport = function () {
-    var elementTop = $(this).offset().top;
-    var elementBottom = elementTop + $(this).outerHeight();
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
+jQuery.fn.isInViewport = function () {
+    var elementTop = jQuery(this).offset().top;
+    var elementBottom = elementTop + jQuery(this).outerHeight();
+    var viewportTop = jQuery(window).scrollTop();
+    var viewportBottom = viewportTop + jQuery(window).height();
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
 // function to add class horizontalProducts to div
 // please make the correct page checks on the site being implemented to ensure this only applies to required pages and not on all pages
 function horizontalFeaturedProducts() {
-    $(".woocommerce.columns-5").addClass("horizontalProducts");
-    $(".dp-dfg-layout-grid").addClass("horizontalProducts");
+    jQuery(".woocommerce.columns-5").addClass("horizontalProducts");
+    jQuery(".dp-dfg-layout-grid").addClass("horizontalProducts");
 }
 
 //function to add event listener for horizontal scroll fix for firefox
@@ -617,9 +617,9 @@ function gooeyCursor() {
 
                 current.x += xDiff * 0.35;
                 current.y += yDiff * 0.35;
-                cursorCircles[i].style.transform = `translate(${current.x}px, ${
+                cursorCircles[i].style.transform = `translate(jQuery{current.x}px, jQuery{
                     current.y
-                }px) scale(${i / TAIL_LENGTH})`;
+                }px) scale(jQuery{i / TAIL_LENGTH})`;
             }
             requestAnimationFrame(updateCursor);
         }
@@ -632,26 +632,26 @@ function gooeyCursor() {
 }
 
 function dropdownMenu() {
-    if ($(".dropdown__field").length) {
-        $(".dropdown__field").each(function (index) {
+    if (jQuery(".dropdown__field").length) {
+        jQuery(".dropdown__field").each(function (index) {
             window.onclick = function (event) {
                 console.log(event.target);
                 if (!event.target.matches(".dropdown")) {
-                    if ($(".dropdown__items__list").hasClass("open")) {
-                        $(".dropdown__items__list").removeClass("open");
+                    if (jQuery(".dropdown__items__list").hasClass("open")) {
+                        jQuery(".dropdown__items__list").removeClass("open");
                     }
                 }
             };
-            $(this).on("click", function (event) {
-                var hc = $(this)
+            jQuery(this).on("click", function (event) {
+                var hc = jQuery(this)
                     .parent()
                     .find(".dropdown__items__list")
                     .hasClass("open");
-                console.log($(this).parent().find(".dropdown__items__list"));
+                console.log(jQuery(this).parent().find(".dropdown__items__list"));
                 console.log(hc);
-                $(".dropdown__items__list").removeClass("open");
+                jQuery(".dropdown__items__list").removeClass("open");
                 if (!hc) {
-                    $(this)
+                    jQuery(this)
                         .parent()
                         .find(".dropdown__items__list")
                         .addClass("open");
@@ -672,7 +672,7 @@ function closeFilterGridDropdown() {
                     jQuery(".dp-dfg-filters-dropdown").hasClass("open") &&
                     e.target.className !== "dp-dfg-dropdown-label"
                 ) {
-                    $(".dp-dfg-filters-dropdown")
+                    jQuery(".dp-dfg-filters-dropdown")
                         .toggleClass("closed open")
                         .find(".dp-dfg-level")
                         .slideUp();
@@ -755,8 +755,8 @@ function createSpanText(selector) {
             .map(
                 (word, index) =>
                     `<span class="outer">
-            <span class="inner">${word}</span>
-          </span>${index !== words.length - 1 ? " " : ""}`
+            <span class="inner">jQuery{word}</span>
+          </span>jQuery{index !== words.length - 1 ? " " : ""}`
             )
             .join("");
     });
@@ -789,8 +789,8 @@ function addCircleWithText(sectionClass, itemClass, text) {
                 const x = event.clientX;
                 const y = event.clientY;
 
-                circle.style.left = `${x}px`;
-                circle.style.top = `${y}px`;
+                circle.style.left = `jQuery{x}px`;
+                circle.style.top = `jQuery{y}px`;
             });
 
             item.addEventListener("mouseenter", () => {
